@@ -3,17 +3,22 @@ if (! defined('ABSPATH')) {
 	exit; // Exit if accessed directly.
 }
 
-require get_template_directory() . '/vendor/autoload.php';
+if (file_exists(get_template_directory() . '/vendor/autoload.php')) {
+    require_once get_template_directory() . '/vendor/autoload.php';
+}
 
 use YahnisElsts\PluginUpdateChecker\v5\PucFactory;
 
-$updateChecker = PucFactory::buildUpdateChecker(
-    'https://github.com/superpublisher-labs/gprodemi-plugin',
-    get_template_directory() . '/style.css',
-    'gprodemi'
-);
+// só roda se a classe existir
+if (class_exists('YahnisElsts\PluginUpdateChecker\v5\PucFactory')) {
+    $updateChecker = PucFactory::buildUpdateChecker(
+        'https://github.com/superpublisher-labs/gprodemi-plugin',
+        get_template_directory() . '/style.css',
+        'gprodemi'
+    );
 
-$updateChecker->setBranch('master');
+    $updateChecker->setBranch('master');
+}
 
 // Habiltiar SVG no header
 function allow_svg_upload($mimes)
