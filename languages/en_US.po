@@ -1,0 +1,288 @@
+# Copyright (C) 2025 Prodemi
+# This file is distributed under the GNU General Public License v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: GProdemi 3.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/gprodemi\n"
+"POT-Creation-Date: 2025-09-12T13:35:44+00:00\n"
+"PO-Revision-Date: 2025-09-12 10:38-0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.7\n"
+"X-Domain: gprodemi\n"
+
+#. Theme Name of the theme
+#: style.css
+msgid "GProdemi"
+msgstr "GProdemi"
+
+#. Theme URI of the theme
+#. Author URI of the theme
+#: style.css
+msgid "http://exemplo.com"
+msgstr "http://exemplo.com"
+
+#. Description of the theme
+#: style.css
+msgid "Tema básico"
+msgstr "Basic theme"
+
+#. Author of the theme
+#: style.css
+msgid "Prodemi"
+msgstr "Prodemi"
+
+#: 404.php:10
+msgid "Oops! Page not found."
+msgstr "Oops! Page not found."
+
+#: 404.php:12
+msgid ""
+"Sorry, but the page you were trying to view does not exist. You can return "
+"to the homepage or try a search below."
+msgstr ""
+"Sorry, but the page you were trying to view does not exist. You can return "
+"to the homepage or try a search below."
+
+#: 404.php:16
+msgid "Go to Homepage"
+msgstr "Go to Homepage"
+
+#: functions.php:63
+msgid "Você será redirecionado para outro site"
+msgstr "You will be redirected to another website"
+
+#: functions.php:64
+msgid "Você permanecerá no mesmo site"
+msgstr "You will remain on the same site"
+
+#: functions.php:85
+msgid "Ativar título no cabeçalho"
+msgstr "Enable title in header"
+
+#: functions.php:96
+msgid "Ativar borda no título"
+msgstr "Enable border on title"
+
+#: functions.php:107
+msgid "Menu Principal"
+msgstr "Main menu"
+
+#: functions.php:108
+msgid "Menu do Rodapé"
+msgstr "Footer menu"
+
+#: functions.php:117
+msgid "Quantidade de posts"
+msgstr "Number of posts"
+
+#: functions.php:127
+msgid "Número de posts por seção"
+msgstr "Per section (You might also like etc.)"
+
+#: functions.php:138
+msgid "Número de posts por página (categorias, autores, etc)"
+msgstr "Per page (categories, authors etc.)"
+
+#: functions.php:160
+msgid "Configurações de Comentários"
+msgstr "Comments settings"
+
+#: functions.php:170
+msgid "Habilitar comentários nos posts"
+msgstr "Enable comments on posts"
+
+#: functions.php:180
+msgid "Cores do Tema"
+msgstr "Theme Colors"
+
+#: functions.php:199
+#, php-format
+msgid "Cor %s"
+msgstr "Color %s"
+
+#: functions.php:231
+msgid "Configurações do Index"
+msgstr "Index settings"
+
+#: functions.php:243
+msgid "Escolha a versão do Index"
+msgstr "Choose Index version"
+
+#: functions.php:248
+msgid "Versão 1"
+msgstr "Version 1"
+
+#: functions.php:249
+msgid "Versão 2"
+msgstr "Version 2"
+
+#: functions.php:262
+#, php-format
+msgctxt "featured post number"
+msgid "Post destacado %d"
+msgstr "Featured post %d"
+
+#: functions.php:276
+msgid "Selecionar"
+msgstr "Select"
+
+#: functions.php:283
+#, php-format
+msgctxt "featured category card number"
+msgid "Categoria do card %d"
+msgstr "Card category %d"
+
+#: functions.php:290 template-parts/category-card.php:22
+msgid "Confira os melhores"
+msgstr "Check the best"
+
+#: functions.php:294
+#, php-format
+msgctxt "featured category card number"
+msgid "Texto do card categoria %d"
+msgstr "Text of category card %d"
+
+#: header.php:68
+msgid "Home"
+msgstr "Home"
+
+#: header.php:96
+msgid "Search"
+msgstr "Search"
+
+#: header.php:100
+msgid "Menu"
+msgstr "Menu"
+
+#: partials/post-card.php:20 template-parts/post-card-inline.php:15
+#: template-parts/post-card-without-photo.php:15
+#: template-parts/post-card.php:23
+msgid "Read More"
+msgstr "Read More"
+
+#: template-parts/authors-card.php:11
+msgid "Posted and reviewed"
+msgstr "Posted and reviewed"
+
+#: template-parts/post-card-inline.php:9
+#: template-parts/post-card-with-label.php:16
+#: template-parts/post-card-without-photo.php:12
+#: template-parts/post-card.php:20
+msgid "Sem Título"
+msgstr "Untitled"
+
+#: templates/home-2.php:66 templates/home.php:92
+msgid "You might also like"
+msgstr "You might also like"
+
+#: templates/home-2.php:137
+msgid "Tendências"
+msgstr "Trends"
+
+#: templates/home-2.php:158 templates/home.php:107
+msgid "Browse by category"
+msgstr "Browse by category"
+
+#: theme.json
+msgctxt "Color name"
+msgid "Logo"
+msgstr "Logo"
+
+#: theme.json
+msgctxt "Color name"
+msgid "Site"
+msgstr "Site"
+
+#: theme.json
+msgctxt "Color name"
+msgid "Links"
+msgstr "Links"
+
+#: theme.json
+msgctxt "Color name"
+msgid "Listas"
+msgstr "Lists"
+
+#: theme.json
+msgctxt "Color name"
+msgid "Links secundario"
+msgstr "Secondary links"
+
+#: theme.json
+msgctxt "Color name"
+msgid "Ancora"
+msgstr "Anchor"
+
+#: theme.json
+msgctxt "Color name"
+msgid "Botao"
+msgstr "Button"
+
+#: theme.json
+msgctxt "Color name"
+msgid "Divider"
+msgstr "Divider"
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Small"
+msgstr "Small"
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Medium"
+msgstr "Medium"
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Large"
+msgstr "Large"
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Extra Large"
+msgstr "Extra Large"
+
+#~ msgid "Destaques"
+#~ msgstr "Featured posts"
+
+#~ msgid "Cabeçalho"
+#~ msgstr "Header"
+
+#~ msgid "Mostrar nome e logo do site"
+#~ msgstr "Show site name and logo"
+
+#~ msgid "Menu de Categorias"
+#~ msgstr "Categories menu"
+
+#, php-format
+#~ msgctxt "category name"
+#~ msgid "Mostrar categoria: %s"
+#~ msgstr "Show category: %s"
+
+#~ msgid "Rodapé"
+#~ msgstr "Footer"
+
+#~ msgid "Este é o texto do rodapé"
+#~ msgstr "This is the footer text"
+
+#~ msgid "Texto do Rodapé"
+#~ msgstr "Footer text"
+
+#, php-format
+#~ msgctxt "footer link number"
+#~ msgid "Link do Rodapé %d"
+#~ msgstr "Footer link %d"
+
+#, php-format
+#~ msgctxt "footer link number"
+#~ msgid "Texto do Link %d"
+#~ msgstr "Text of link %d"
+
+#~ msgid "Você também pode gostar"
+#~ msgstr "You might also like"

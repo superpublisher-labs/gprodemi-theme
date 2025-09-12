@@ -1,0 +1,288 @@
+# Copyright (C) 2025 Prodemi
+# This file is distributed under the GNU General Public License v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: GProdemi 3.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/gprodemi\n"
+"POT-Creation-Date: 2025-09-12T13:35:44+00:00\n"
+"PO-Revision-Date: 2025-09-12 10:38-0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: es_ES\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.7\n"
+"X-Domain: gprodemi\n"
+
+#. Theme Name of the theme
+#: style.css
+msgid "GProdemi"
+msgstr "GProdemi"
+
+#. Theme URI of the theme
+#. Author URI of the theme
+#: style.css
+msgid "http://exemplo.com"
+msgstr "http://exemplo.com"
+
+#. Description of the theme
+#: style.css
+msgid "Tema básico"
+msgstr "Tema básico"
+
+#. Author of the theme
+#: style.css
+msgid "Prodemi"
+msgstr "Prodemi"
+
+#: 404.php:10
+msgid "Oops! Page not found."
+msgstr "¡Ups! Página no encontrada."
+
+#: 404.php:12
+msgid ""
+"Sorry, but the page you were trying to view does not exist. You can return "
+"to the homepage or try a search below."
+msgstr ""
+"Lo sentimos, pero la página que intentabas ver no existe. Puedes volver a la "
+"página principal o intentar una búsqueda a continuación."
+
+#: 404.php:16
+msgid "Go to Homepage"
+msgstr "Ir a la Página de Inicio"
+
+#: functions.php:63
+msgid "Você será redirecionado para outro site"
+msgstr "Te redirigirás a otro sitio"
+
+#: functions.php:64
+msgid "Você permanecerá no mesmo site"
+msgstr "Permanecerás en el mismo sitio"
+
+#: functions.php:85
+msgid "Ativar título no cabeçalho"
+msgstr "Habilitar título en el encabezado"
+
+#: functions.php:96
+msgid "Ativar borda no título"
+msgstr "Habilitar borde en el título"
+
+#: functions.php:107
+msgid "Menu Principal"
+msgstr "Menú Principal"
+
+#: functions.php:108
+msgid "Menu do Rodapé"
+msgstr "Menú del Pie de Página"
+
+#: functions.php:117
+msgid "Quantidade de posts"
+msgstr "Número de publicaciones"
+
+#: functions.php:127
+msgid "Número de posts por seção"
+msgstr "Por sección (También te puede gustar etc.)"
+
+#: functions.php:138
+msgid "Número de posts por página (categorias, autores, etc)"
+msgstr "Por página (categorías, autores etc.)"
+
+#: functions.php:160
+msgid "Configurações de Comentários"
+msgstr "Configuración de Comentarios"
+
+#: functions.php:170
+msgid "Habilitar comentários nos posts"
+msgstr "Habilitar comentarios en las publicaciones"
+
+#: functions.php:180
+msgid "Cores do Tema"
+msgstr "Colores del Tema"
+
+#: functions.php:199
+#, php-format
+msgid "Cor %s"
+msgstr "Color %s"
+
+#: functions.php:231
+msgid "Configurações do Index"
+msgstr "Configurações do Index"
+
+#: functions.php:243
+msgid "Escolha a versão do Index"
+msgstr "Elija la versión del índice"
+
+#: functions.php:248
+msgid "Versão 1"
+msgstr "Versión 1"
+
+#: functions.php:249
+msgid "Versão 2"
+msgstr "Versión 2"
+
+#: functions.php:262
+#, php-format
+msgctxt "featured post number"
+msgid "Post destacado %d"
+msgstr "Publicación destacada %d"
+
+#: functions.php:276
+msgid "Selecionar"
+msgstr "Seleccionar"
+
+#: functions.php:283
+#, php-format
+msgctxt "featured category card number"
+msgid "Categoria do card %d"
+msgstr "Categoría de tarjeta %d"
+
+#: functions.php:290 template-parts/category-card.php:22
+msgid "Confira os melhores"
+msgstr "Descubre los mejores"
+
+#: functions.php:294
+#, php-format
+msgctxt "featured category card number"
+msgid "Texto do card categoria %d"
+msgstr "Texto de la tarjeta de la categoría %d"
+
+#: header.php:68
+msgid "Home"
+msgstr "Inicio"
+
+#: header.php:96
+msgid "Search"
+msgstr "Buscar"
+
+#: header.php:100
+msgid "Menu"
+msgstr "Menú"
+
+#: partials/post-card.php:20 template-parts/post-card-inline.php:15
+#: template-parts/post-card-without-photo.php:15
+#: template-parts/post-card.php:23
+msgid "Read More"
+msgstr "Leer más"
+
+#: template-parts/authors-card.php:11
+msgid "Posted and reviewed"
+msgstr "Publicado y revisado"
+
+#: template-parts/post-card-inline.php:9
+#: template-parts/post-card-with-label.php:16
+#: template-parts/post-card-without-photo.php:12
+#: template-parts/post-card.php:20
+msgid "Sem Título"
+msgstr "Intitulado"
+
+#: templates/home-2.php:66 templates/home.php:92
+msgid "You might also like"
+msgstr "También te puede gustar"
+
+#: templates/home-2.php:137
+msgid "Tendências"
+msgstr "Tendencias"
+
+#: templates/home-2.php:158 templates/home.php:107
+msgid "Browse by category"
+msgstr "Explorar por categoría"
+
+#: theme.json
+msgctxt "Color name"
+msgid "Logo"
+msgstr "Logo"
+
+#: theme.json
+msgctxt "Color name"
+msgid "Site"
+msgstr "Sitio"
+
+#: theme.json
+msgctxt "Color name"
+msgid "Links"
+msgstr "Enlaces"
+
+#: theme.json
+msgctxt "Color name"
+msgid "Listas"
+msgstr "Listas"
+
+#: theme.json
+msgctxt "Color name"
+msgid "Links secundario"
+msgstr "Enlaces secundarios"
+
+#: theme.json
+msgctxt "Color name"
+msgid "Ancora"
+msgstr "Ancla"
+
+#: theme.json
+msgctxt "Color name"
+msgid "Botao"
+msgstr "Botón"
+
+#: theme.json
+msgctxt "Color name"
+msgid "Divider"
+msgstr "Divisor"
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Small"
+msgstr "Pequeño"
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Medium"
+msgstr "Mediano"
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Large"
+msgstr "Grande"
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Extra Large"
+msgstr "Extra Grande"
+
+#~ msgid "Destaques"
+#~ msgstr "Destacados"
+
+#~ msgid "Cabeçalho"
+#~ msgstr "Encabezado"
+
+#~ msgid "Mostrar nome e logo do site"
+#~ msgstr "Mostrar el nombre y el logotipo del sitio"
+
+#~ msgid "Menu de Categorias"
+#~ msgstr "Menú de categorías"
+
+#, php-format
+#~ msgctxt "category name"
+#~ msgid "Mostrar categoria: %s"
+#~ msgstr "Mostrar categoría: %s"
+
+#~ msgid "Rodapé"
+#~ msgstr "Pie de Página"
+
+#~ msgid "Este é o texto do rodapé"
+#~ msgstr "Este es el texto del pie de página"
+
+#~ msgid "Texto do Rodapé"
+#~ msgstr "Texto del Pie de Página"
+
+#, php-format
+#~ msgctxt "footer link number"
+#~ msgid "Link do Rodapé %d"
+#~ msgstr "Enlace del Pie de Página %d"
+
+#, php-format
+#~ msgctxt "footer link number"
+#~ msgid "Texto do Link %d"
+#~ msgstr "Texto del Enlace %d"
+
+#~ msgid "Você também pode gostar"
+#~ msgstr "También te puede gustar"

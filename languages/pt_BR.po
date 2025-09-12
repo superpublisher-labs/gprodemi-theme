@@ -1,0 +1,288 @@
+# Copyright (C) 2025 Prodemi
+# This file is distributed under the GNU General Public License v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: GProdemi 3.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/gprodemi\n"
+"POT-Creation-Date: 2025-09-12T13:35:44+00:00\n"
+"PO-Revision-Date: 2025-09-12 10:37-0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: pt_BR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.7\n"
+"X-Domain: gprodemi\n"
+
+#. Theme Name of the theme
+#: style.css
+msgid "GProdemi"
+msgstr "GProdemi"
+
+#. Theme URI of the theme
+#. Author URI of the theme
+#: style.css
+msgid "http://exemplo.com"
+msgstr "http://exemplo.com"
+
+#. Description of the theme
+#: style.css
+msgid "Tema básico"
+msgstr "Tema básico"
+
+#. Author of the theme
+#: style.css
+msgid "Prodemi"
+msgstr "Prodemi"
+
+#: 404.php:10
+msgid "Oops! Page not found."
+msgstr "Oops! Página não encontrada."
+
+#: 404.php:12
+msgid ""
+"Sorry, but the page you were trying to view does not exist. You can return "
+"to the homepage or try a search below."
+msgstr ""
+"Desculpe, mas a página que você estava tentando visualizar não existe. Você "
+"pode retornar à página inicial ou tentar uma busca abaixo."
+
+#: 404.php:16
+msgid "Go to Homepage"
+msgstr "Ir para a Página Inicial"
+
+#: functions.php:63
+msgid "Você será redirecionado para outro site"
+msgstr "Você será redirecionado para outro site"
+
+#: functions.php:64
+msgid "Você permanecerá no mesmo site"
+msgstr "Você permanecerá no mesmo site"
+
+#: functions.php:85
+msgid "Ativar título no cabeçalho"
+msgstr "Ativar título no cabeçalho"
+
+#: functions.php:96
+msgid "Ativar borda no título"
+msgstr "Ativar borda no título"
+
+#: functions.php:107
+msgid "Menu Principal"
+msgstr "Menu Principal"
+
+#: functions.php:108
+msgid "Menu do Rodapé"
+msgstr "Menu do Rodapé"
+
+#: functions.php:117
+msgid "Quantidade de posts"
+msgstr "Quantidade de posts"
+
+#: functions.php:127
+msgid "Número de posts por seção"
+msgstr "Por seção (Você pode gostar etc.)"
+
+#: functions.php:138
+msgid "Número de posts por página (categorias, autores, etc)"
+msgstr "Por página (categorias, autores etc.)"
+
+#: functions.php:160
+msgid "Configurações de Comentários"
+msgstr "Configurações de Comentários"
+
+#: functions.php:170
+msgid "Habilitar comentários nos posts"
+msgstr "Habilitar comentários nos posts"
+
+#: functions.php:180
+msgid "Cores do Tema"
+msgstr "Cores do Tema"
+
+#: functions.php:199
+#, php-format
+msgid "Cor %s"
+msgstr "Cor %s"
+
+#: functions.php:231
+msgid "Configurações do Index"
+msgstr "Configurações do Index"
+
+#: functions.php:243
+msgid "Escolha a versão do Index"
+msgstr "Escolha a versão do Index"
+
+#: functions.php:248
+msgid "Versão 1"
+msgstr "Versão 1"
+
+#: functions.php:249
+msgid "Versão 2"
+msgstr "Versão 2"
+
+#: functions.php:262
+#, php-format
+msgctxt "featured post number"
+msgid "Post destacado %d"
+msgstr "Post destacado %d"
+
+#: functions.php:276
+msgid "Selecionar"
+msgstr "Selecionar"
+
+#: functions.php:283
+#, php-format
+msgctxt "featured category card number"
+msgid "Categoria do card %d"
+msgstr "Categoria do card %d"
+
+#: functions.php:290 template-parts/category-card.php:22
+msgid "Confira os melhores"
+msgstr "Confira os melhores"
+
+#: functions.php:294
+#, php-format
+msgctxt "featured category card number"
+msgid "Texto do card categoria %d"
+msgstr "Texto do card categoria %d"
+
+#: header.php:68
+msgid "Home"
+msgstr "Home"
+
+#: header.php:96
+msgid "Search"
+msgstr "Buscar"
+
+#: header.php:100
+msgid "Menu"
+msgstr "Menu"
+
+#: partials/post-card.php:20 template-parts/post-card-inline.php:15
+#: template-parts/post-card-without-photo.php:15
+#: template-parts/post-card.php:23
+msgid "Read More"
+msgstr "Continuar lendo"
+
+#: template-parts/authors-card.php:11
+msgid "Posted and reviewed"
+msgstr "Publicado e revisado"
+
+#: template-parts/post-card-inline.php:9
+#: template-parts/post-card-with-label.php:16
+#: template-parts/post-card-without-photo.php:12
+#: template-parts/post-card.php:20
+msgid "Sem Título"
+msgstr "Sem Título"
+
+#: templates/home-2.php:66 templates/home.php:92
+msgid "You might also like"
+msgstr "Você também pode gostar"
+
+#: templates/home-2.php:137
+msgid "Tendências"
+msgstr "Tendências"
+
+#: templates/home-2.php:158 templates/home.php:107
+msgid "Browse by category"
+msgstr "Explorar por categoria"
+
+#: theme.json
+msgctxt "Color name"
+msgid "Logo"
+msgstr "Logo"
+
+#: theme.json
+msgctxt "Color name"
+msgid "Site"
+msgstr "Site"
+
+#: theme.json
+msgctxt "Color name"
+msgid "Links"
+msgstr "Links"
+
+#: theme.json
+msgctxt "Color name"
+msgid "Listas"
+msgstr "Listas"
+
+#: theme.json
+msgctxt "Color name"
+msgid "Links secundario"
+msgstr "Links secundário"
+
+#: theme.json
+msgctxt "Color name"
+msgid "Ancora"
+msgstr "Ancora"
+
+#: theme.json
+msgctxt "Color name"
+msgid "Botao"
+msgstr "Botão"
+
+#: theme.json
+msgctxt "Color name"
+msgid "Divider"
+msgstr "Divisor"
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Small"
+msgstr "Pequeno"
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Medium"
+msgstr "Médio"
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Large"
+msgstr "Grande"
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Extra Large"
+msgstr "Extra Grande"
+
+#~ msgid "Destaques"
+#~ msgstr "Destaques"
+
+#~ msgid "Cabeçalho"
+#~ msgstr "Cabeçalho"
+
+#~ msgid "Mostrar nome e logo do site"
+#~ msgstr "Mostrar nome e logo do site"
+
+#~ msgid "Menu de Categorias"
+#~ msgstr "Menu de Categorias"
+
+#, php-format
+#~ msgctxt "category name"
+#~ msgid "Mostrar categoria: %s"
+#~ msgstr "Mostrar categoria: %s"
+
+#~ msgid "Rodapé"
+#~ msgstr "Rodapé"
+
+#~ msgid "Este é o texto do rodapé"
+#~ msgstr "Este é o texto do rodapé"
+
+#~ msgid "Texto do Rodapé"
+#~ msgstr "Texto do Rodapé"
+
+#, php-format
+#~ msgctxt "footer link number"
+#~ msgid "Link do Rodapé %d"
+#~ msgstr "Link do Rodapé %d"
+
+#, php-format
+#~ msgctxt "footer link number"
+#~ msgid "Texto do Link %d"
+#~ msgstr "Texto do Link %d"
+
+#~ msgid "Você também pode gostar"
+#~ msgstr "Você também pode gostar"
