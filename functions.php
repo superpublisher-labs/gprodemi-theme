@@ -7,7 +7,7 @@ use YahnisElsts\PluginUpdateChecker\v5\PucFactory;
 
 $UpdateChecker = PucFactory::buildUpdateChecker(
 	'https://github.com/superpublisher-labs/gprodemi-theme',
-	__FILE__,
+	get_template_directory() . '/style.css',
 	'gprodemi'
 );
 
