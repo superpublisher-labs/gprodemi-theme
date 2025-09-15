@@ -18,7 +18,7 @@ setup_postdata($post);
     </a>
 
     <h3 class="text-xl font-medium mt-4"><?php the_title() ?: __('Sem Título', 'gprodemi'); ?></h3>
-    <p class="text-gray-600 mt-2 text-lg"><?php echo wp_trim_words(get_the_excerpt(), 30); ?></p>
+    <p class="text-gray-700 mt-2 text-lg"><?php echo wp_trim_words(get_the_excerpt(), 30); ?></p>
     <a href="<?php the_permalink(); ?>" class="text-[var(--color-links)] hover:underline flex items-center gap-2 text-lg mt-4 font-semibold">
         <?php _e('Read More', 'gprodemi'); ?><i data-lucide="arrow-right" class="w-4 h-4"></i>
     </a>

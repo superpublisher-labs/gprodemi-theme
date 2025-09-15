@@ -8,7 +8,7 @@ if (! defined('ABSPATH')) {
 <footer class="p-6 pb-10 bg-stone-100">
 	<div class="container mx-auto">
 		<div class="flex flex-col gap-10">
-			<span class="text-gray-600">
+			<span class="text-gray-700">
 				<?php echo esc_html(get_theme_mod('footer_text')); ?>
 			</span>
 
@@ -17,7 +17,7 @@ if (! defined('ABSPATH')) {
 				wp_nav_menu([
 					'theme_location'  => 'footer_menu', // slug registrado no register_nav_menus
 					'container'       => false, // remove <div> extra
-					'menu_class'      => 'flex gap-4 text-sm text-gray-600 flex-wrap list-none', // classe do <ul>
+					'menu_class'      => 'flex gap-4 text-sm text-gray-700 flex-wrap list-none', // classe do <ul>
 					'add_li_class'    => '', // não existe nativo, vou já resolver com filter abaixo
 				]);
 

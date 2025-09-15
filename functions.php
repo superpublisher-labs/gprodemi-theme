@@ -1,17 +1,25 @@
 <?php
-if (! defined('ABSPATH')) {
-	exit; // Exit if accessed directly.
-}
 
 use YahnisElsts\PluginUpdateChecker\v5\PucFactory;
 
-$UpdateChecker = PucFactory::buildUpdateChecker(
-	'https://github.com/superpublisher-labs/gprodemi-theme',
-	get_template_directory() . '/style.css',
-	'gprodemi'
-);
+if (!class_exists(PucFactory::class) && file_exists(get_template_directory() . '/vendor/autoload.php')) {
+	require_once get_template_directory() . '/vendor/autoload.php';
+}
 
-$UpdateChecker->setBranch('master');
+if (class_exists(PucFactory::class)) {
+	$UpdateChecker = PucFactory::buildUpdateChecker(
+		'https://github.com/superpublisher-labs/gprodemi-theme',
+		get_template_directory() . '/style.css',
+		'gprodemi'
+	);
+
+	$UpdateChecker->setBranch('master');
+}
+
+
+if (! defined('ABSPATH')) {
+	exit; // Exit if accessed directly.
+}
 
 // Habiltiar SVG no header
 function allow_svg_upload($mimes)

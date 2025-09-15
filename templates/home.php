@@ -106,7 +106,7 @@ wp_reset_postdata(); ?>
 	<div class="container mx-auto">
 		<h2 class="text-2xl font-medium mb-8"><?php _e('Browse by category', 'gprodemi'); ?></h2>
 		<div>
-			<ul class="flex flex-wrap gap-2 grid grid-cols-1 md:grid-cols-3 marker:text-[var(--color-listas)] list-disc marker:text-xl pl-4 text-lg text-gray-500">
+			<ul class="flex flex-wrap gap-2 grid grid-cols-1 md:grid-cols-3 marker:text-[var(--color-listas)] list-disc marker:text-xl pl-4 text-lg text-gray-700">
 				<?php
 				$all_cats = get_categories(['orderby' => 'name', 'hide_empty' => false]);
 

@@ -23,7 +23,7 @@ for ($i = 1; $i <= 3; $i++) {
 ?>
     <a href="<?php echo esc_url(get_category_link($cat->term_id)); ?>" class="w-full !p-2 lg:p-0 rounded-xl bg-white/5 backdrop-blur-sm flex-1 flex flex-col items-center justify-center border border-gray-300">
         <h3 class="!text-md !font-medium"><?php echo esc_html($cat->name); ?></h3>
-        <span class="text-gray-500"><?php echo esc_html($card_text); ?></span>
+        <span class="text-gray-700"><?php echo esc_html($card_text); ?></span>
     </a>
 <?php
 }

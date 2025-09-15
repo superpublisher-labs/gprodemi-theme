@@ -78,7 +78,7 @@ if (! defined('ABSPATH')) {
 
 					add_filter('nav_menu_link_attributes', function ($atts, $item, $args, $depth) {
 						if ($args->theme_location === 'primary_menu') {
-							$atts['class'] = 'text-gray-600 hover:text-[var(--color-links)] transition-colors';
+							$atts['class'] = 'text-gray-700 hover:text-[var(--color-links)] transition-colors';
 						}
 						return $atts;
 					}, 10, 4);

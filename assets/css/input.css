@@ -100,7 +100,7 @@
 
   #artigo *,
   #artigo :not(h1, h2, h3) {
-    @apply text-base text-gray-500;
+    @apply text-base text-gray-700;
   }
 
   ul {
@@ -130,7 +130,7 @@
   .gprodemi-image-block-text,
   .imagemPost-radius P,
   .wp-block-image figcaption {
-    @apply text-sm text-gray-600 !m-0 p-1.5;
+    @apply text-sm text-gray-700 !m-0 p-1.5;
   }
 
   .container {
@@ -169,11 +169,11 @@
   }
 
   .blocoApps-t3 {
-    @apply !text-gray-600 !text-sm mt-3;
+    @apply !text-gray-700 !text-sm mt-3;
   }
 
   .blocoApps-t4 {
-    @apply !text-gray-600 !text-sm text-right;
+    @apply !text-gray-700 !text-sm text-right;
   }
 
   .blocoApps-link,
@@ -224,7 +224,7 @@
   }
 
   .leiaTambem-footer {
-    @apply !text-gray-600 !text-sm text-right;
+    @apply !text-gray-700 !text-sm text-right;
   }
 
   .wp-block-gprodemi-faq-block .faq-item {
