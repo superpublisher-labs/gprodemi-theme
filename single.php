@@ -21,7 +21,7 @@ get_header(); ?>
 	?>
 
 	<?php
-	$enable_comments = get_theme_mod('enable_comments_posts', true);
+	$enable_comments = get_theme_mod('enable_comments_posts', false);
 
 	if ($enable_comments && (comments_open() || get_comments_number())) :
 		comments_template();
