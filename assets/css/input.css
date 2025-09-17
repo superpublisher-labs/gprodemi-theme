@@ -161,7 +161,7 @@
   }
 
   .blocoApps-imagem {
-    @apply w-[400px] overflow-hidden rounded-xl;
+    @apply max-w-[400px] overflow-hidden rounded-xl;
     float: left;
   }
 
