@@ -55,7 +55,10 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 document.addEventListener('DOMContentLoaded', function() {
-    // PARAMETROS URL
+    if (document.body.classList.contains('wp-admin') || (window.wp && window.wp.customize)) {
+        return;
+    }
+
     const siteOrigin = window.location.origin;
     const params = new URLSearchParams(window.location.search);
     params.delete('s');
@@ -69,10 +72,15 @@ document.addEventListener('DOMContentLoaded', function() {
             const url = new URL(link.href, siteOrigin);
 
             if (url.origin === siteOrigin) {
-                url.search = queryString;
+                const existingParams = new URLSearchParams(url.search);
+                params.forEach((value, key) => {
+                    existingParams.set(key, value);
+                });
+                url.search = existingParams.toString();
                 link.href = url.toString();
             }
         } catch (e) {
+            console.error(e);
         }
     }
 
@@ -89,12 +97,19 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    document.querySelectorAll('a').forEach(updateLink);
-    document.querySelectorAll('form').forEach(updateForm);
+    function runUpdates() {
+        document.querySelectorAll('a:not([data-gprodemi-processed])').forEach(link => {
+            updateLink(link);
+            link.setAttribute('data-gprodemi-processed', 'true');
+        });
+        document.querySelectorAll('form:not([data-gprodemi-processed])').forEach(form => {
+            updateForm(form);
+            form.setAttribute('data-gprodemi-processed', 'true');
+        });
+    }
 
-    const observer = new MutationObserver(() => {
-        document.querySelectorAll('a').forEach(updateLink);
-        document.querySelectorAll('form').forEach(updateForm);
-    });
+    runUpdates();
+
+    const observer = new MutationObserver(runUpdates);
     observer.observe(document.body, { childList: true, subtree: true });
 });
