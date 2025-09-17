@@ -28,6 +28,9 @@ if (! defined('ABSPATH')) {
 	});
 
 	?>
+	<?php
+		include get_template_directory() . '/inc/facebookpixel.php';
+	?>
 
 </head>
 

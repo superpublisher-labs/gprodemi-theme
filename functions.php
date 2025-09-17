@@ -21,6 +21,71 @@ if (! defined('ABSPATH')) {
 	exit; // Exit if accessed directly.
 }
 
+// Adiciona parâmetros atuais em links internos do conteúdo
+add_filter('the_content', function ($content) {
+	$params = $_GET;
+	unset($params['s']); // remove search
+
+	if (!empty($params)) {
+		$query = '?' . http_build_query($params);
+
+		// Adiciona query em todos os links internos do conteúdo
+		$content = preg_replace_callback(
+			'#href="(/[^"]*)"#',
+			function ($matches) use ($query) {
+				return 'href="' . $matches[1] . $query . '"';
+			},
+			$content
+		);
+	}
+
+	return $content;
+});
+
+// Adiciona o template atual na barra de admin
+function admin_bar($wp_admin_bar)
+{
+	if (! current_user_can('manage_options')) {
+		return;
+	}
+
+	$theme = wp_get_theme();
+
+	$args = array(
+		'id'    =>	'template-atual',
+		'title' =>	'GProdemi v' . $theme->get('Version'),
+		'href'  => 	admin_url('customize.php'),
+		'meta'  =>	array(
+			'title' => 'Clique para abrir o Personalizador do Tema',
+		)
+	);
+
+	$wp_admin_bar->add_node($args);
+}
+add_action('admin_bar_menu', 'admin_bar', 999);
+
+// Adiciona parâmetros atuais em menus
+add_filter('wp_nav_menu', function ($nav_menu) {
+	$params = $_GET;
+	unset($params['s']); // remove search
+
+	if (!empty($params)) {
+		$query = '?' . http_build_query($params);
+
+		// Adiciona query em todos os links internos do menu
+		$nav_menu = preg_replace_callback(
+			'#href="(/[^"]*)"#',
+			function ($matches) use ($query) {
+				return 'href="' . $matches[1] . $query . '"';
+			},
+			$nav_menu
+		);
+	}
+
+	return $nav_menu;
+});
+
+
 // Habiltiar SVG no header
 function allow_svg_upload($mimes)
 {
