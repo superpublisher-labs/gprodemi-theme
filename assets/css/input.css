@@ -112,7 +112,7 @@
   }
 
   #artigo a {
-    @apply text-[var(--color-links)] hover:!underline;
+    @apply text-[var(--color-links)] !underline ;
   }
 
   .gprodemi-image-block,
