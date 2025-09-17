@@ -29,7 +29,7 @@ if (! defined('ABSPATH')) {
 
 	?>
 	<?php
-		include get_template_directory() . '/inc/facebookpixel.php';
+	include get_template_directory() . '/inc/facebookpixel.php';
 	?>
 
 </head>
@@ -97,11 +97,18 @@ if (! defined('ABSPATH')) {
 				</div>
 				<div class="flex items-center gap-4 justify-between">
 					<button id="search-btn" class="hover:text-[var(--color-links)] transition-colors cursor-pointer" title="<?php _e('Search', 'gprodemi'); ?>">
-						<i data-lucide="search"></i>
+						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-search-icon lucide-search">
+							<path d="m21 21-4.34-4.34" />
+							<circle cx="11" cy="11" r="8" />
+						</svg>
 					</button>
 
 					<button id="mobile-menu-btn" class="md:hidden hover:text-[var(--color-links)] transition-colors" title="<?php _e('Menu', 'gprodemi'); ?>">
-						<i data-lucide="menu"></i>
+						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu-icon lucide-menu">
+							<path d="M4 5h16" />
+							<path d="M4 12h16" />
+							<path d="M4 19h16" />
+						</svg>
 					</button>
 				</div>
 			</div>
@@ -131,7 +138,7 @@ if (! defined('ABSPATH')) {
 					<a href="<?php echo esc_url($item->url); ?>"
 						class="hover:text-[var(--color-links)] transition-all duration-300 flex w-full md:w-1/2 hover:text-blue-500 justify-between items-center">
 						<?php echo esc_html($item->title); ?>
-						<i data-lucide="arrow-right"></i>
+						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right-icon lucide-arrow-right"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
 					</a>
 		<?php
 				}
@@ -141,7 +148,7 @@ if (! defined('ABSPATH')) {
 
 		<button id="close-mobile-menu"
 			class="hover:text-purple-400 transition-colors transition-all mt-4">
-			<i data-lucide="x"></i>
+			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x-icon lucide-x"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
 		</button>
 	</div>
 

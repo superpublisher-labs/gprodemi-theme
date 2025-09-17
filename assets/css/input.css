@@ -103,15 +103,15 @@
     @apply text-base text-gray-700;
   }
 
-  ul {
+  #artigo ul {
     @apply list-disc list-inside marker:text-[var(--color-listas)] marker:text-xl;
   }
 
-  ol {
+  #artigo ol {
     @apply list-decimal list-inside marker:text-[var(--color-listas)];
   }
 
-  #artigo a {
+  #artigo>a {
     @apply text-[var(--color-links)] !underline ;
   }
 
@@ -196,6 +196,7 @@
   .blocoApps-link,
   .block-blocoApps-link {
     @apply bg-[var(--color-botao)] !text-white px-4 py-1 rounded mt-4 uppercase ml-auto text-center !text-base hover:bg-[var(--color-botao)]/60 transition-colors;
+    text-decoration: none !important;
   }
 
   .block-blocoApps-link {
@@ -229,7 +230,7 @@
 
   .leiaTambem-link,
   .block-leiaTambem-link {
-    @apply relative p-4 pl-9 text-[var(--color-links)] hover:!underline;
+    @apply relative p-4 pl-9 text-[var(--color-links)] !no-underline hover:!underline;
   }
 
   .leiaTambem-link::before {
@@ -281,7 +282,7 @@
 
   .linksInternos-a,
   .block-linksInternos-a {
-    @apply !font-medium !text-base !text-black rounded-xl p-4 pr-14 relative text-left transition-colors duration-100 md:!text-[var(--color-links)] md:!bg-white !bg-[var(--color-links)] !text-white border border-[var(--color-links)];
+    @apply !no-underline !font-medium !text-base !text-black rounded-xl p-4 pr-14 relative text-left transition-colors duration-100 md:!text-[var(--color-links)] md:!bg-white !bg-[var(--color-links)] !text-white border border-[var(--color-links)];
   }
 
   .linksInternos-a:hover,

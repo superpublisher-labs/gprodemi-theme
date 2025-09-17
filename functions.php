@@ -103,17 +103,9 @@ add_action('wp_enqueue_scripts', function () {
 	);
 
 	wp_enqueue_script(
-		'lucide-icons',
-		'https://unpkg.com/lucide@latest/dist/umd/lucide.js',
-		[],
-		null,
-		true
-	);
-
-	wp_enqueue_script(
 		'theme-main',
 		get_theme_file_uri('/assets/js/main.js'),
-		['lucide-icons'],
+		[],
 		filemtime(get_theme_file_path('/assets/js/main.js')),
 		true
 	);
