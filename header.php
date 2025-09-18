@@ -31,7 +31,8 @@ if (! defined('ABSPATH')) {
 	<?php
 	include get_template_directory() . '/inc/facebookpixel.php';
 	?>
-
+	
+	<link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400..900&display=swap" rel="stylesheet">
 </head>
 
 <body <?php body_class(); ?>>

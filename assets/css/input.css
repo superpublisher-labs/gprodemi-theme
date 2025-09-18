@@ -1,6 +1,4 @@
 @import "tailwindcss";
-@import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400..900&display=swap');
-
 
 @theme {
   --font-maven: "Maven Pro", sans-serif;
@@ -78,6 +76,8 @@
 @layer utilities {
   * {
     font-family: var(--font-maven);
+    text-rendering: optimizeLegibility;
+    @apply leading-[1.5];
   }
 
   .logo-header svg path {
