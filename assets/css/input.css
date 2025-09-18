@@ -301,4 +301,16 @@
   .block-linksInternos-a::after {
     @apply top-auto;
   }
+
+  .page-links {
+    @apply !text-gray-700 !text-sm my-12;
+  }
+
+  .page-link {
+    @apply !text-[var(--color-botao)] !text-base p-2.5 px-5 border border-[var(--color-botao)] hover:bg-[var(--color-botao)] hover:!text-white font-semibold rounded-lg mr-1 ;
+  }
+
+  .page-links .current .page-link {
+    @apply !bg-[var(--color-botao)] !text-white !cursor-not-allowed;
+  }
 }
