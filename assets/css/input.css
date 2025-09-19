@@ -79,27 +79,23 @@
     text-rendering: optimizeLegibility;
   }
 
-  .logo-header svg path {
-    @apply !fill-[var(--color-logo)];
-  }
-
   #artigos h2,
   #policy h2 {
-    @apply !text-[1.375rem] font-bold mt-8;
+    @apply !text-[1.375rem] font-bold mt-8 !text-black;
   }
 
   #artigos h3,
   #policy h3 {
-    @apply text-[1.125rem] font-bold mt-8;
+    @apply text-[1.125rem] font-bold mt-8 !text-black;
   }
 
   #artigo * {
-    @apply text-gray-600 !leading-[1.6];
+    @apply !leading-[1.6];
   }
 
   #artigo *,
   #artigo :not(h1, h2, h3) {
-    @apply text-base;
+    @apply text-[1.125rem] text-[#666666];
   }
 
   #artigo ul {

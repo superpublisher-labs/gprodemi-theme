@@ -34,7 +34,7 @@ if (!defined('ABSPATH')) {
 									$logo_path = get_attached_file($logo_id);
 									if ($logo_path && file_exists($logo_path)) {
 										$svg = file_get_contents($logo_path);
-										$svg = preg_replace('/fill=".*?"/', 'fill="currentColor"', $svg);
+										$svg = preg_replace('/stroke=".*?"/', 'stroke="currentColor"', $svg);
 										echo $svg;
 									}
 								} else {
