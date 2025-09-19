@@ -319,6 +319,6 @@
   }
 
   .menu-item {
-    @apply py-2;
+    @apply py-6;
   }
 }
