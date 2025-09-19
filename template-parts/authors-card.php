@@ -4,7 +4,7 @@ if (! defined('ABSPATH')) {
 }
 ?>
 <article class="w-full container mx-auto flex items-center justify-between">
-    <div class="flex flex-col items-center w-full p-8 gap-2">
+    <div class="flex flex-col items-center w-full p-8 py-15 gap-2">
         <img src="<?php echo get_avatar_url(get_the_author_meta('ID'), ['size' => 96]); ?>"
             class="w-16 h-16 rounded-xl" alt="<?php the_author(); ?>">
 

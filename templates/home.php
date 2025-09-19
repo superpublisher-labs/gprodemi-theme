@@ -8,7 +8,7 @@ set_query_var('displayed_posts', $displayed_posts);
 
 get_header(); ?>
 
-<section id="home" class="py-8">
+<section id="home" class="py-20">
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
         <?php
         $featured_ids = [];

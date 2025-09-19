@@ -1,4 +1,4 @@
-<section id="categorias" class="py-8">
+<section id="categorias" class="py-20">
     <div class="container mx-auto">
         <h2 class="text-2xl font-semibold mb-8"><?php _e('Browse by category', 'gprodemi'); ?></h2>
         <div>

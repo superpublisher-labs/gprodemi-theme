@@ -1,7 +1,7 @@
 <?php
 $displayed_posts = get_query_var('displayed_posts', []);
 $number = get_theme_mod('related_posts_number', 3);
-$section_class = get_theme_mod('related_posts_class', 'py-8');
+$section_class = get_theme_mod('related_posts_class', 'py-20');
 
 $like_also_args = [
     'post_type'      => 'post',
@@ -12,7 +12,7 @@ $like_also_args = [
 $like_also_query = new WP_Query($like_also_args);
 
 if ($like_also_query->have_posts()) :
-    $grid_class = 'grid grid-cols-1 gap-12 md:gap-8';
+    $grid_class = 'grid grid-cols-1 gap-20 md:gap-8';
     if ($number % 4 === 0) {
         $grid_class .= ' sm:grid-cols-2 md:grid-cols-4';
     } else {

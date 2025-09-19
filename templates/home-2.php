@@ -9,7 +9,7 @@ set_query_var('displayed_posts', $displayed_posts);
 
 get_header(); ?>
 
-<section id="home" class="py-8">
+<section id="home" class="py-20">
     <div class="container mx-auto flex flex-col gap-6">
         <div class="grid md:grid-cols-1 lg:grid-cols-2 gap-8">
             <?php

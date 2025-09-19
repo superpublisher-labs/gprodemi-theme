@@ -1,9 +1,9 @@
 <?php
 $displayed_posts = get_query_var('displayed_posts', []);
 ?>
-<section id="vertical-posts" class="py-8">
+<section id="vertical-posts" class="py-20">
     <div class="container mx-auto">
-        <div class="flex flex-col items-start gap-10 md:gap-6 w-full">
+        <div class="flex flex-col items-start gap-10 md:gap-20 w-full">
             <?php
             $vertical_args = [
                 'post_type'      => 'post',

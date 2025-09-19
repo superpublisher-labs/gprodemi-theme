@@ -1,7 +1,7 @@
 <?php
 $displayed_posts = get_query_var('displayed_posts', []);
 $number_trending = get_theme_mod('related_posts_number', 3);
-$section_class = 'py-8';
+$section_class = 'py-20';
 $trending_post_ids = [];
 
 for ($i = 1; $i <= $number_trending; $i++) {
@@ -31,7 +31,7 @@ $trending_post_ids = array_unique($trending_post_ids);
 if (!empty($trending_post_ids)) :
     $displayed_posts = array_merge($displayed_posts, $trending_post_ids);
 
-    $grid_class = 'grid grid-cols-1 gap-12 md:gap-8';
+    $grid_class = 'grid grid-cols-1 gap-20 md:gap-8';
     if ($number_trending % 4 === 0) {
         $grid_class .= ' sm:grid-cols-2 md:grid-cols-4';
     } else {

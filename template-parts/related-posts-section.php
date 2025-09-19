@@ -1,7 +1,7 @@
 <?php
 $displayed_posts = get_query_var('displayed_posts', []);
 $number_related  = get_theme_mod('related_posts_number', 3);
-$section_class   = 'py-8';
+$section_class   = 'py-20';
 
 // pega as categorias do post atual
 $categories = wp_get_post_categories(get_the_ID());
@@ -18,7 +18,7 @@ $related_args = [
 $related_query = new WP_Query($related_args);
 
 if ($related_query->have_posts()) :
-    $grid_class = 'grid grid-cols-1 gap-8';
+    $grid_class = 'grid grid-cols-1 gap-20 md:gap-8';
     if ($number_related % 4 === 0) {
         $grid_class .= ' sm:grid-cols-2 md:grid-cols-4';
     } else {
