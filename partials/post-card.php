@@ -23,7 +23,7 @@ if (! defined('ABSPATH')) {
     </a>
 
     <p class="text-2xl font-semibold mt-4"><?php the_title() ?: __('Sem Título', 'gprodemi'); ?></p>
-    <p class="text-stone-800 mt-2 text-lg"><?php echo wp_trim_words(get_the_excerpt(), 30); ?></p>
+    <p class="text-gray-600 mt-2 text-lg"><?php echo wp_trim_words(get_the_excerpt(), 30); ?></p>
 
     <a href="<?php the_permalink(); ?>"
         title="<?php the_title() ?: __('Sem Título', 'gprodemi'); ?>"

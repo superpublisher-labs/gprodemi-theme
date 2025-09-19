@@ -10,7 +10,7 @@ setup_postdata($post);
 
 <article class="bg-gray-100 rounded-xl p-6 flex flex-col justify-center items-center text-center gap-4">
     <p class="!text-xl !font-medium"><?php the_title() ?: __('Sem Título', 'gprodemi'); ?></p>
-    <p class="text-stone-800 mt-2 !text-lg"><?php echo wp_trim_words(get_the_excerpt(), 30); ?></p>
+    <p class="text-gray-600 mt-2 !text-lg"><?php echo wp_trim_words(get_the_excerpt(), 30); ?></p>
     <a href="<?php the_permalink(); ?>"
         class="text-[var(--color-links)] hover:underline flex items-center gap-2 text-lg mt-4 font-semibold"
         title="<?php the_title() ?: __('Sem Título', 'gprodemi'); ?>">

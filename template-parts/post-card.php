@@ -24,7 +24,7 @@ if (! defined('ABSPATH')) {
         </a>
     </h2>
 
-    <div class="text-stone-800 mt-2 text-lg">
+    <div class="text-gray-600 mt-2 text-lg">
         <?php echo wp_trim_words(get_the_excerpt(), 30); ?>
     </div>
 

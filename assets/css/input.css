@@ -94,7 +94,7 @@
   }
 
   #artigo * {
-    @apply text-stone-800 !leading-[1.6];
+    @apply text-gray-600 !leading-[1.6];
   }
 
   #artigo *,
@@ -126,7 +126,7 @@
 
   .gprodemi-image-block-text,
   .imagemPost-radius P {
-    @apply text-sm text-stone-800 !m-0 p-1.5;
+    @apply text-sm text-gray-600 !m-0 p-1.5;
   }
 
   .block-editor-block-list__block .wp-block-image,
@@ -151,7 +151,7 @@
 
   .block-editor-block-list__block .wp-element-caption,
   .wp-element-caption {
-    @apply !text-sm !text-stone-800 !m-0 p-1.5 !border !border-gray-200 !rounded-b-lg;
+    @apply !text-sm !text-gray-600 !m-0 p-1.5 !border !border-gray-200 !rounded-b-lg;
   }
 
   .container {
@@ -190,11 +190,11 @@
   }
 
   .blocoApps-t3 {
-    @apply !text-stone-800 !text-sm mt-2;
+    @apply !text-gray-600 !text-sm mt-2;
   }
 
   .blocoApps-t4 {
-    @apply !text-stone-800 !text-sm text-right mt-2;
+    @apply !text-gray-600 !text-sm text-right mt-2;
   }
 
   .blocoApps-link,
@@ -246,7 +246,7 @@
   }
 
   .leiaTambem-footer {
-    @apply !text-stone-800 !text-sm text-right;
+    @apply !text-gray-600 !text-sm text-right;
   }
 
   .wp-block-gprodemi-faq-block .faq-item {
@@ -307,7 +307,7 @@
   }
 
   .page-links {
-    @apply !text-stone-800 !text-sm my-12;
+    @apply !text-gray-600 !text-sm my-12;
   }
 
   .page-link {

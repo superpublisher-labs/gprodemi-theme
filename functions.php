@@ -49,7 +49,7 @@ add_filter('nav_menu_css_class', function ($classes, $item, $args, $depth) {
 
 add_filter('nav_menu_link_attributes', function ($atts, $item, $args, $depth) {
 	if ($args->theme_location === 'primary_menu') {
-		$atts['class'] = 'text-stone-800 border-2 border-transparent hover:border-gray-200 px-2 py-1 rounded-xl transition-colors';
+		$atts['class'] = 'text-gray-800 border-2 border-transparent hover:border-gray-200 px-2 py-1 rounded-xl transition-colors';
 	}
 	return $atts;
 }, 10, 4);
@@ -462,66 +462,3 @@ add_filter('wpseo_metadesc', function ($desc) {
 	}
 	return $desc;
 });
-
-//CACHE
-function register_cache_cleaner_menu() {
-    add_menu_page(
-        __('Limpar Cache', 'gprodemi'), 
-        __('Limpar Cache', 'gprodemi'), 
-        'manage_options', 
-        'gprodemi-cache-cleaner', 
-        'render_cache_cleaner_page', 
-        'dashicons-editor-removeformatting',
-        100
-    );
-}
-add_action('admin_menu', 'register_cache_cleaner_menu');
-
-function render_cache_cleaner_page() {
-    if (isset($_POST['clean_cache']) && check_admin_referer('gprodemi_clean_cache_nonce')) {
-        wp_cache_flush();
-        
-        flush_rewrite_rules();
-        
-        global $wpdb;
-        $wpdb->query("DELETE FROM {$wpdb->options} WHERE option_name LIKE '%_transient_%'");
-        
-        if (function_exists('wp_cache_flush')) {
-            wp_cache_flush();
-        }
-        
-        echo '<div class="notice notice-success"><p>' . esc_html__('Cache limpo com sucesso!', 'gprodemi') . '</p></div>';
-    }
-    
-    ?>
-    <div class="wrap">
-        <h1><?php esc_html_e('Limpar Cache do WordPress', 'gprodemi'); ?></h1>
-        <div class="card" style="max-width: 800px; padding: 20px; margin-top: 20px;">
-            <h2><?php esc_html_e('Limpeza de Cache', 'gprodemi'); ?></h2>
-            <p><?php esc_html_e('Use esta ferramenta para limpar o cache interno do WordPress. Isso pode ajudar a resolver problemas de exibição e garantir que as alterações mais recentes sejam exibidas corretamente.', 'gprodemi'); ?></p>
-            
-            <div class="cache-info" style="background: #f8f9fa; padding: 15px; border-radius: 4px; margin: 15px 0;">
-                <h3 style="margin-top: 0;"><?php esc_html_e('O que será limpo?', 'gprodemi'); ?></h3>
-                <ul style="list-style-type: disc; margin-left: 20px;">
-                    <li><?php esc_html_e('Cache de Objetos do WordPress - Armazenamento temporário de consultas e dados', 'gprodemi'); ?></li>
-                    <li><?php esc_html_e('Regras de Reescrita - URLs personalizadas e estruturas de permalink', 'gprodemi'); ?></li>
-                    <li><?php esc_html_e('Transientes - Dados temporários armazenados no banco de dados', 'gprodemi'); ?></li>
-                    <li><?php esc_html_e('Cache de Consultas - Resultados armazenados de consultas ao banco de dados', 'gprodemi'); ?></li>
-                </ul>
-                <p class="description" style="margin-top: 10px; color: #666;">
-                    <?php esc_html_e('Após a limpeza, o WordPress irá reconstruir o cache conforme necessário. Isso pode resultar em uma leve redução temporária de velocidade até que o novo cache seja construído.', 'gprodemi'); ?>
-                </p>
-            </div>
-            
-            <form method="POST">
-                <?php wp_nonce_field('gprodemi_clean_cache_nonce'); ?>
-                <p>
-                    <button type="submit" name="clean_cache" class="button button-primary button-large">
-                        <?php esc_html_e('Limpar Cache Agora', 'gprodemi'); ?>
-                    </button>
-                </p>
-            </form>
-        </div>
-    </div>
-    <?php
-}

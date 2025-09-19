@@ -36,9 +36,9 @@ if ( post_password_required() ) {
                             <div class="flex-1">
                                 <div class="flex items-center justify-between">
                                     <span class="font-semibold text-lg"><?php comment_author(); ?></span>
-                                    <span class="text-stone-800 text-sm"><?php comment_date(); ?> <?php comment_time(); ?></span>
+                                    <span class="text-gray-600 text-sm"><?php comment_date(); ?> <?php comment_time(); ?></span>
                                 </div>
-                                <div class="mt-2 text-stone-800 text-lg">
+                                <div class="mt-2 text-gray-600 text-lg">
                                     <?php comment_text(); ?>
                                 </div>
                                 <div class="mt-2">
