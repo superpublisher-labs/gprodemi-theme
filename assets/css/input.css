@@ -174,7 +174,7 @@
   }
 
   .blocoApps-textos .blocoApps-link {
-    @apply mt-auto;
+    @apply mt-7.5 md:mt-auto;
   }
 
   .blocoApps-t1 {
@@ -186,7 +186,7 @@
   }
 
   .blocoApps-t3 {
-    @apply !text-gray-600 !text-sm mt-2;
+    @apply !text-gray-600 !text-base mt-2;
   }
 
   .blocoApps-t4 {
@@ -195,7 +195,7 @@
 
   .blocoApps-link,
   .block-blocoApps-link {
-    @apply bg-[var(--color-botao)] !text-white px-4 py-1 rounded mt-4 uppercase ml-auto text-center !text-base hover:bg-[var(--color-botao)]/60 transition-colors;
+    @apply bg-[var(--color-botao)] !text-white px-4 py-1 rounded uppercase mt-4 ml-auto text-center !text-base hover:bg-[var(--color-botao)]/60 transition-colors;
     text-decoration: none !important;
   }
 
