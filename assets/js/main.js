@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     if (document.body.classList.contains('wp-admin') || (window.wp && window.wp.customize)) {
         return;
     }

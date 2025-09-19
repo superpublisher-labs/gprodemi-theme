@@ -20,7 +20,7 @@ get_header(); ?>
                     <?php echo esc_html($author->display_name); ?>
                 </h2>
                 <?php if (!empty($author->description)) : ?>
-                    <p class="text-gray-700">
+                    <p class="text-stone-800">
                         <?php echo esc_html($author->description); ?>
                     </p>
                 <?php endif; ?>

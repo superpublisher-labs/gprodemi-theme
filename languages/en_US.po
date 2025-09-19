@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GProdemi 3.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/gprodemi\n"
-"POT-Creation-Date: 2025-09-12T13:35:44+00:00\n"
-"PO-Revision-Date: 2025-09-12 10:38-0300\n"
+"POT-Creation-Date: 2025-09-18T18:44:36+00:00\n"
+"PO-Revision-Date: 2025-09-18 15:46-0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: en_US\n"
@@ -52,116 +52,129 @@ msgstr ""
 msgid "Go to Homepage"
 msgstr "Go to Homepage"
 
-#: functions.php:63
-msgid "Você será redirecionado para outro site"
-msgstr "You will be redirected to another website"
-
-#: functions.php:64
-msgid "Você permanecerá no mesmo site"
-msgstr "You will remain on the same site"
-
-#: functions.php:85
+#: functions.php:137
 msgid "Ativar título no cabeçalho"
 msgstr "Enable title in header"
 
-#: functions.php:96
+#: functions.php:148
 msgid "Ativar borda no título"
 msgstr "Enable border on title"
 
-#: functions.php:107
+#: functions.php:158
+msgid "Rodapé"
+msgstr "Footer"
+
+#: functions.php:168
+msgid "Texto do rodapé"
+msgstr "Footer Text"
+
+#: functions.php:179
 msgid "Menu Principal"
 msgstr "Main menu"
 
-#: functions.php:108
+#: functions.php:180
 msgid "Menu do Rodapé"
 msgstr "Footer menu"
 
-#: functions.php:117
+#: functions.php:189
 msgid "Quantidade de posts"
 msgstr "Number of posts"
 
-#: functions.php:127
+#: functions.php:199
 msgid "Número de posts por seção"
 msgstr "Per section (You might also like etc.)"
 
-#: functions.php:138
+#: functions.php:210
 msgid "Número de posts por página (categorias, autores, etc)"
 msgstr "Per page (categories, authors etc.)"
 
-#: functions.php:160
+#: functions.php:232
 msgid "Configurações de Comentários"
 msgstr "Comments settings"
 
-#: functions.php:170
+#: functions.php:242
 msgid "Habilitar comentários nos posts"
 msgstr "Enable comments on posts"
 
-#: functions.php:180
+#: functions.php:252
 msgid "Cores do Tema"
 msgstr "Theme Colors"
 
-#: functions.php:199
+#: functions.php:271
 #, php-format
 msgid "Cor %s"
 msgstr "Color %s"
 
-#: functions.php:231
+#: functions.php:303
 msgid "Configurações do Index"
 msgstr "Index settings"
 
-#: functions.php:243
+#: functions.php:315
 msgid "Escolha a versão do Index"
 msgstr "Choose Index version"
 
-#: functions.php:248
+#: functions.php:320
 msgid "Versão 1"
 msgstr "Version 1"
 
-#: functions.php:249
+#: functions.php:321
 msgid "Versão 2"
 msgstr "Version 2"
 
-#: functions.php:262
+#: functions.php:334
 #, php-format
 msgctxt "featured post number"
 msgid "Post destacado %d"
 msgstr "Featured post %d"
 
-#: functions.php:276
+#: functions.php:348
 msgid "Selecionar"
 msgstr "Select"
 
-#: functions.php:283
+#: functions.php:355
 #, php-format
 msgctxt "featured category card number"
 msgid "Categoria do card %d"
 msgstr "Card category %d"
 
-#: functions.php:290 template-parts/category-card.php:22
+#: functions.php:362 template-parts/category-card.php:22
 msgid "Confira os melhores"
 msgstr "Check the best"
 
-#: functions.php:294
+#: functions.php:366
 #, php-format
 msgctxt "featured category card number"
 msgid "Texto do card categoria %d"
 msgstr "Text of category card %d"
 
-#: header.php:68
+#: header.php:72
 msgid "Home"
 msgstr "Home"
 
-#: header.php:96
+#: header.php:100
 msgid "Search"
 msgstr "Search"
 
-#: header.php:100
+#: header.php:107
 msgid "Menu"
 msgstr "Menu"
 
-#: partials/post-card.php:20 template-parts/post-card-inline.php:15
-#: template-parts/post-card-without-photo.php:15
-#: template-parts/post-card.php:23
+#: partials/post-card.php:8 partials/post-card.php:16 partials/post-card.php:21
+#: partials/post-card.php:25 partials/post-card.php:29
+#: template-parts/post-card-inline.php:8 template-parts/post-card-inline.php:9
+#: template-parts/post-card-inline.php:14
+#: template-parts/post-card-with-label.php:16
+#: template-parts/post-card-with-label.php:21
+#: template-parts/post-card-with-label.php:25
+#: template-parts/post-card-without-photo.php:12
+#: template-parts/post-card-without-photo.php:16
+#: template-parts/post-card.php:13
+msgid "Sem Título"
+msgstr "Untitled"
+
+#: partials/post-card.php:31 template-parts/post-card-inline.php:16
+#: template-parts/post-card-without-photo.php:17
+#: template-parts/post-card.php:34
 msgid "Read More"
 msgstr "Read More"
 
@@ -169,84 +182,71 @@ msgstr "Read More"
 msgid "Posted and reviewed"
 msgstr "Posted and reviewed"
 
-#: template-parts/post-card-inline.php:9
-#: template-parts/post-card-with-label.php:16
-#: template-parts/post-card-without-photo.php:12
-#: template-parts/post-card.php:20
-msgid "Sem Título"
-msgstr "Untitled"
-
-#: templates/home-2.php:66 templates/home.php:92
+#: templates/home-2.php:81 templates/home.php:100
 msgid "You might also like"
 msgstr "You might also like"
 
-#: templates/home-2.php:137
+#: templates/home-2.php:140
 msgid "Tendências"
 msgstr "Trends"
 
-#: templates/home-2.php:158 templates/home.php:107
+#: templates/home-2.php:166 templates/home.php:119
 msgid "Browse by category"
 msgstr "Browse by category"
 
-#: theme.json
-msgctxt "Color name"
-msgid "Logo"
-msgstr "Logo"
+#~ msgid "Você será redirecionado para outro site"
+#~ msgstr "You will be redirected to another website"
 
-#: theme.json
-msgctxt "Color name"
-msgid "Site"
-msgstr "Site"
+#~ msgid "Você permanecerá no mesmo site"
+#~ msgstr "You will remain on the same site"
 
-#: theme.json
-msgctxt "Color name"
-msgid "Links"
-msgstr "Links"
+#~ msgctxt "Color name"
+#~ msgid "Logo"
+#~ msgstr "Logo"
 
-#: theme.json
-msgctxt "Color name"
-msgid "Listas"
-msgstr "Lists"
+#~ msgctxt "Color name"
+#~ msgid "Site"
+#~ msgstr "Site"
 
-#: theme.json
-msgctxt "Color name"
-msgid "Links secundario"
-msgstr "Secondary links"
+#~ msgctxt "Color name"
+#~ msgid "Links"
+#~ msgstr "Links"
 
-#: theme.json
-msgctxt "Color name"
-msgid "Ancora"
-msgstr "Anchor"
+#~ msgctxt "Color name"
+#~ msgid "Listas"
+#~ msgstr "Lists"
 
-#: theme.json
-msgctxt "Color name"
-msgid "Botao"
-msgstr "Button"
+#~ msgctxt "Color name"
+#~ msgid "Links secundario"
+#~ msgstr "Secondary links"
 
-#: theme.json
-msgctxt "Color name"
-msgid "Divider"
-msgstr "Divider"
+#~ msgctxt "Color name"
+#~ msgid "Ancora"
+#~ msgstr "Anchor"
 
-#: theme.json
-msgctxt "Font size name"
-msgid "Small"
-msgstr "Small"
+#~ msgctxt "Color name"
+#~ msgid "Botao"
+#~ msgstr "Button"
 
-#: theme.json
-msgctxt "Font size name"
-msgid "Medium"
-msgstr "Medium"
+#~ msgctxt "Color name"
+#~ msgid "Divider"
+#~ msgstr "Divider"
 
-#: theme.json
-msgctxt "Font size name"
-msgid "Large"
-msgstr "Large"
+#~ msgctxt "Font size name"
+#~ msgid "Small"
+#~ msgstr "Small"
 
-#: theme.json
-msgctxt "Font size name"
-msgid "Extra Large"
-msgstr "Extra Large"
+#~ msgctxt "Font size name"
+#~ msgid "Medium"
+#~ msgstr "Medium"
+
+#~ msgctxt "Font size name"
+#~ msgid "Large"
+#~ msgstr "Large"
+
+#~ msgctxt "Font size name"
+#~ msgid "Extra Large"
+#~ msgstr "Extra Large"
 
 #~ msgid "Destaques"
 #~ msgstr "Featured posts"
@@ -265,14 +265,8 @@ msgstr "Extra Large"
 #~ msgid "Mostrar categoria: %s"
 #~ msgstr "Show category: %s"
 
-#~ msgid "Rodapé"
-#~ msgstr "Footer"
-
 #~ msgid "Este é o texto do rodapé"
 #~ msgstr "This is the footer text"
-
-#~ msgid "Texto do Rodapé"
-#~ msgstr "Footer text"
 
 #, php-format
 #~ msgctxt "footer link number"

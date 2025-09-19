@@ -1,49 +1,27 @@
 <?php
-if (! defined('ABSPATH')) {
-	exit; // Exit if accessed directly.
+if (!defined('ABSPATH')) {
+    exit; // Exit if accessed directly.
 }
 ?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
-<title><?php bloginfo('name'); ?></title>
 
 <head>
-	<meta charset="<?php bloginfo('charset'); ?>">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<?php
-	wp_head();
-
-	add_action('wp_head', function () {
-	?>
-		<style>
-			:root {
-				--color-logo: <?php echo get_theme_mod('color_logo', '!important #ff8c00'); ?>;
-				--color-links: <?php echo get_theme_mod('color_links', '!important #0693e3'); ?>;
-				--color-listas: <?php echo get_theme_mod('color_listas', '!important #0693e3'); ?>;
-				--color-botao: <?php echo get_theme_mod('color_botao', '!important #0018cd'); ?>;
-				--color-divider: <?php echo get_theme_mod('color_divider', '!important #ff8c00'); ?>;
-			}
-		</style>
-	<?php
-	});
-
-	?>
-	<?php
-	include get_template_directory() . '/inc/facebookpixel.php';
-	?>
-	
-	<link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400..900&display=swap" rel="stylesheet">
+    <meta charset="<?php bloginfo('charset'); ?>">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <?php wp_head(); ?>
+    <?php include get_template_directory() . '/inc/facebookpixel.php'; ?>
+    <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400..900&display=swap" rel="stylesheet">
 </head>
 
 <body <?php body_class(); ?>>
-	<?php wp_body_open(); ?>
-	<header class="w-full border-b border-gray-200">
-		<nav class="container mx-auto py-1 md:py-2 px-4">
-			<div class="flex items-center flex-wrap justify-between gap-4">
-				<div class="flex items-center gap-8">
-					<div class="flex flex-row items-center text-[var(--color-logo)] gap-2">
-
-						<?php
+    <?php wp_body_open(); ?>
+    <header class="w-full border-b border-gray-200">
+        <nav class="container mx-auto py-1 md:py-2 px-4">
+            <div class="flex items-center flex-wrap justify-between gap-4">
+                <div class="flex items-center gap-8">
+                    <div class="flex flex-row items-center text-[var(--color-logo)] gap-2">
+                        <?php
 						$logo_id = get_theme_mod('custom_logo');
 						$logo_url = wp_get_attachment_url($logo_id);
 
@@ -69,25 +47,10 @@ if (! defined('ABSPATH')) {
 						?>
 
 						<?php if (get_theme_mod('show_site_title_logo', true)) : ?>
-							<a id="logo-title" href="<?php echo home_url('/'); ?>" title="<?php _e('Home', 'gprodemi'); ?>" class="text-xl md:text-2xl font-bold <?php if (get_theme_mod('activate_border_title', false)) : ?>border-2  border-[var(--color-logo)] rounded-lg px-3<?php endif; ?>"><?php bloginfo('name'); ?></a>
+							<a id="logo-title" href="<?php echo home_url('/'); ?>" title="<?php _e('Home', 'gprodemi'); ?>" class="text-xl md:text-2xl font-semibold <?php if (get_theme_mod('activate_border_title', false)) : ?>border-2  border-[var(--color-logo)] rounded-lg px-3<?php endif; ?>"><?php bloginfo('name'); ?></a>
 						<?php endif; ?>
 					</div>
 					<?php
-					add_filter('nav_menu_css_class', function ($classes, $item, $args, $depth) {
-						if ($args->theme_location === 'primary_menu') {
-							$classes[] = 'relative group';
-						}
-						return $classes;
-					}, 10, 4);
-
-					add_filter('nav_menu_link_attributes', function ($atts, $item, $args, $depth) {
-						if ($args->theme_location === 'primary_menu') {
-							$atts['class'] = 'text-gray-700 border-2 border-transparent hover:border-gray-200 px-2 py-1 rounded-xl transition-colors';
-						}
-						return $atts;
-					}, 10, 4);
-
-					// Chamada do menu
 					wp_nav_menu([
 						'theme_location'  => 'primary_menu',
 						'container'       => 'nav',
@@ -139,7 +102,10 @@ if (! defined('ABSPATH')) {
 					<a href="<?php echo esc_url($item->url); ?>"
 						class="hover:text-[var(--color-links)] transition-all duration-300 flex w-full md:w-1/2 hover:text-[var(--color-links)]/70 justify-between items-center">
 						<?php echo esc_html($item->title); ?>
-						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right-icon lucide-arrow-right"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right-icon lucide-arrow-right">
+							<path d="M5 12h14" />
+							<path d="m12 5 7 7-7 7" />
+						</svg>
 					</a>
 		<?php
 				}
@@ -149,7 +115,10 @@ if (! defined('ABSPATH')) {
 
 		<button id="close-mobile-menu"
 			class="hover:text-[var(--color-links)] transition-colors transition-all mt-4">
-			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x-icon lucide-x"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x-icon lucide-x">
+				<path d="M18 6 6 18" />
+				<path d="m6 6 12 12" />
+			</svg>
 		</button>
 	</div>
 

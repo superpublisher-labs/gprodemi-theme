@@ -8,7 +8,7 @@ if (! defined('ABSPATH')) {
         <img src="<?php echo get_avatar_url(get_the_author_meta('ID'), ['size' => 96]); ?>"
             class="w-16 h-16 rounded-xl" alt="<?php the_author(); ?>">
 
-        <span class="text-gray-700 font-medium"><?php _e('Posted and reviewed', 'gprodemi'); ?></span>
+        <span class="text-stone-800 font-medium"><?php _e('Posted and reviewed', 'gprodemi'); ?></span>
         <span class="text-xl font-semibold">
             <a href="<?php echo esc_url(get_author_posts_url(get_the_author_meta('ID'))); ?>">
                 <?php the_author(); ?>
@@ -19,6 +19,6 @@ if (! defined('ABSPATH')) {
                 <?php echo get_the_category()[0]->name; ?>
             </a>
         </span>
-        <span class="text-gray-700 text-sm"><?php echo get_the_date('d/m/Y'); ?></span>
+        <span class="text-stone-800 text-sm"><?php echo get_the_date('d/m/Y'); ?></span>
     </div>
 </article>

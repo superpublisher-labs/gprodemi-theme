@@ -21,6 +21,53 @@ if (! defined('ABSPATH')) {
 	exit; // Exit if accessed directly.
 }
 
+add_theme_support('title-tag');
+
+function gprodemi_custom_colors_css()
+{
+	$handle = 'gprodemi-style';
+
+	$custom_css = "
+        :root {
+            --color-logo: " . esc_attr(get_theme_mod('color_logo', '#ff8c00')) . ";
+            --color-links: " . esc_attr(get_theme_mod('color_links', '#0693e3')) . ";
+            --color-listas: " . esc_attr(get_theme_mod('color_listas', '#0693e3')) . ";
+            --color-botao: " . esc_attr(get_theme_mod('color_botao', '#0018cd')) . ";
+            --color-divider: " . esc_attr(get_theme_mod('color_divider', '#ff8c00')) . ";
+        }
+    ";
+	wp_add_inline_style($handle, $custom_css);
+}
+add_action('wp_enqueue_scripts', 'gprodemi_custom_colors_css');
+
+add_filter('nav_menu_css_class', function ($classes, $item, $args, $depth) {
+	if ($args->theme_location === 'primary_menu') {
+		$classes[] = 'relative group';
+	}
+	return $classes;
+}, 10, 4);
+
+add_filter('nav_menu_link_attributes', function ($atts, $item, $args, $depth) {
+	if ($args->theme_location === 'primary_menu') {
+		$atts['class'] = 'text-stone-800 border-2 border-transparent hover:border-gray-200 px-2 py-1 rounded-xl transition-colors';
+	}
+	return $atts;
+}, 10, 4);
+
+add_filter('nav_menu_css_class', function ($classes, $item, $args, $depth) {
+	if ($args->theme_location === 'footer_menu') {
+		$classes[] = 'inline';
+	}
+	return $classes;
+}, 10, 4);
+
+add_filter('nav_menu_link_attributes', function ($atts, $item, $args, $depth) {
+	if ($args->theme_location === 'footer_menu') {
+		$atts['class'] = 'hover:!underline footer-menu-item';
+	}
+	return $atts;
+}, 10, 4);
+
 // Adiciona parâmetros atuais em links internos do conteúdo
 add_filter('the_content', function ($content) {
 	$params = $_GET;
@@ -85,6 +132,41 @@ add_filter('wp_nav_menu', function ($nav_menu) {
 	return $nav_menu;
 });
 
+/**
+ * Exibe o logo do site ou retorna o HTML.
+ */
+function display_custom_favicon()
+{
+	$site_icon_id = get_option('site_icon');
+
+	if ($site_icon_id) {
+		return;
+	}
+
+	$custom_logo_id = get_theme_mod('custom_logo');
+	$logo_path = get_attached_file($custom_logo_id); // caminho físico do arquivo
+	$logo_url  = wp_get_attachment_url($custom_logo_id); // URL original
+
+	$file_extension = pathinfo($logo_path, PATHINFO_EXTENSION);
+	$file_extension = strtolower($file_extension);
+
+	if ($file_extension === 'svg') {
+		$svg_content = file_get_contents($logo_path);
+		$svg_content = str_replace('<svg', '<svg class="corLogoHeader"', $svg_content);
+		$encoded_svg = base64_encode($svg_content);
+
+		echo '<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,' . $encoded_svg . '">';
+		echo '<link rel="alternate icon" type="image/png" href="' . get_site_icon_url() . '">';
+	} else if (in_array($file_extension, ['jpg', 'jpeg', 'png'])) {
+		echo '<link rel="icon" type="image/' . $file_extension . '" href="' . esc_url($logo_url) . '">';
+		echo '<link rel="alternate icon" type="image/png" href="' . esc_url($logo_url) . '">';
+	}
+}
+add_action('wp_head', 'display_custom_favicon', 100);
+
+add_filter('get_site_icon_url', function($url){
+    return $url . '?v=1';
+});
 
 // Habiltiar SVG no header
 function allow_svg_upload($mimes)
@@ -151,6 +233,26 @@ function theme_customize_register($wp_customize)
 	]);
 }
 add_action('customize_register', 'theme_customize_register');
+
+function theme_footer_text($wp_customize)
+{
+	$wp_customize->add_section('footer_text_section', [
+		'title'    => __('Rodapé', 'gprodemi'),
+		'priority' => 70,
+	]);
+
+	$wp_customize->add_setting('footer_text', [
+		'default'           => '',
+		'sanitize_callback' => 'sanitize_text_field',
+	]);
+
+	$wp_customize->add_control('footer_text', [
+		'label'   => __('Texto do rodapé', 'gprodemi'),
+		'section' => 'footer_text_section',
+		'type'    => 'textarea',
+	]);
+}
+add_action('customize_register', 'theme_footer_text');
 
 // Register Menus
 function theme_register_menus()
@@ -360,3 +462,66 @@ add_filter('wpseo_metadesc', function ($desc) {
 	}
 	return $desc;
 });
+
+//CACHE
+function register_cache_cleaner_menu() {
+    add_menu_page(
+        __('Limpar Cache', 'gprodemi'), 
+        __('Limpar Cache', 'gprodemi'), 
+        'manage_options', 
+        'gprodemi-cache-cleaner', 
+        'render_cache_cleaner_page', 
+        'dashicons-editor-removeformatting',
+        100
+    );
+}
+add_action('admin_menu', 'register_cache_cleaner_menu');
+
+function render_cache_cleaner_page() {
+    if (isset($_POST['clean_cache']) && check_admin_referer('gprodemi_clean_cache_nonce')) {
+        wp_cache_flush();
+        
+        flush_rewrite_rules();
+        
+        global $wpdb;
+        $wpdb->query("DELETE FROM {$wpdb->options} WHERE option_name LIKE '%_transient_%'");
+        
+        if (function_exists('wp_cache_flush')) {
+            wp_cache_flush();
+        }
+        
+        echo '<div class="notice notice-success"><p>' . esc_html__('Cache limpo com sucesso!', 'gprodemi') . '</p></div>';
+    }
+    
+    ?>
+    <div class="wrap">
+        <h1><?php esc_html_e('Limpar Cache do WordPress', 'gprodemi'); ?></h1>
+        <div class="card" style="max-width: 800px; padding: 20px; margin-top: 20px;">
+            <h2><?php esc_html_e('Limpeza de Cache', 'gprodemi'); ?></h2>
+            <p><?php esc_html_e('Use esta ferramenta para limpar o cache interno do WordPress. Isso pode ajudar a resolver problemas de exibição e garantir que as alterações mais recentes sejam exibidas corretamente.', 'gprodemi'); ?></p>
+            
+            <div class="cache-info" style="background: #f8f9fa; padding: 15px; border-radius: 4px; margin: 15px 0;">
+                <h3 style="margin-top: 0;"><?php esc_html_e('O que será limpo?', 'gprodemi'); ?></h3>
+                <ul style="list-style-type: disc; margin-left: 20px;">
+                    <li><?php esc_html_e('Cache de Objetos do WordPress - Armazenamento temporário de consultas e dados', 'gprodemi'); ?></li>
+                    <li><?php esc_html_e('Regras de Reescrita - URLs personalizadas e estruturas de permalink', 'gprodemi'); ?></li>
+                    <li><?php esc_html_e('Transientes - Dados temporários armazenados no banco de dados', 'gprodemi'); ?></li>
+                    <li><?php esc_html_e('Cache de Consultas - Resultados armazenados de consultas ao banco de dados', 'gprodemi'); ?></li>
+                </ul>
+                <p class="description" style="margin-top: 10px; color: #666;">
+                    <?php esc_html_e('Após a limpeza, o WordPress irá reconstruir o cache conforme necessário. Isso pode resultar em uma leve redução temporária de velocidade até que o novo cache seja construído.', 'gprodemi'); ?>
+                </p>
+            </div>
+            
+            <form method="POST">
+                <?php wp_nonce_field('gprodemi_clean_cache_nonce'); ?>
+                <p>
+                    <button type="submit" name="clean_cache" class="button button-primary button-large">
+                        <?php esc_html_e('Limpar Cache Agora', 'gprodemi'); ?>
+                    </button>
+                </p>
+            </form>
+        </div>
+    </div>
+    <?php
+}
