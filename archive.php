@@ -15,7 +15,7 @@ get_header(); ?>
 			?>
 		</h1>
 
-		<div class="grid grid-cols-1 md:grid-cols-<?php echo esc_attr(get_theme_mod('related_posts_page_number', 3) % 4 === 0 ? 4 : 3); ?>  gap-8">
+		<div class="grid grid-cols-1 md:grid-cols-<?php echo esc_attr(get_theme_mod('related_posts_page_number', 3) % 4 === 0 ? 4 : 3); ?>  gap-x-8 gap-y-20">
 			<?php while (have_posts()) : the_post(); ?>
 				<?php get_template_part('partials/post-card'); ?>
 			<?php endwhile; ?>
