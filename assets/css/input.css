@@ -230,7 +230,7 @@
 
   .leiaTambem-link,
   .block-leiaTambem-link {
-    @apply relative p-4 pl-9 text-[var(--color-links)] !no-underline hover:!underline;
+    @apply relative p-4 pl-9 !text-[var(--color-links)] !no-underline hover:!underline;
   }
 
   .leiaTambem-link::before {

@@ -462,3 +462,5 @@ add_filter('wpseo_metadesc', function ($desc) {
 	}
 	return $desc;
 });
+
+add_theme_support('post-thumbnails'); // suporte a thumbnails
