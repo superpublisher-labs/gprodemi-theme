@@ -151,6 +151,10 @@
     @apply w-full;
   }
 
+  .imagemPost-radius .wp-caption {
+    @apply !w-full;
+  }
+
   .gprodemi-image-block-text,
   .imagemPost-radius P {
     @apply text-sm text-gray-600 !m-0 p-1.5;
