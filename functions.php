@@ -236,7 +236,7 @@ function theme_footer_text($wp_customize)
 
 	$wp_customize->add_setting('footer_text', [
 		'default'           => '',
-		'sanitize_callback' => 'sanitize_text_field',
+		'sanitize_callback' => 'sanitize_textarea_field',
 	]);
 
 	$wp_customize->add_control('footer_text', [

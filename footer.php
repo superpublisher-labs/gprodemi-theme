@@ -8,7 +8,7 @@ if (! defined('ABSPATH')) {
 <footer class="p-6 py-15 bg-stone-100">
 	<div class="container mx-auto">
 		<div class="flex flex-col gap-15">
-			<span class="text-gray-600">
+			<span class="text-gray-600 whitespace-pre-line">
 				<?php echo esc_html(get_theme_mod('footer_text')); ?>
 			</span>
 
