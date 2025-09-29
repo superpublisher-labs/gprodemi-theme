@@ -355,4 +355,8 @@
   .menu-item {
     @apply py-6;
   }
+
+  #category-cards-home2>a {
+    @apply lg:py-4;
+  }
 }

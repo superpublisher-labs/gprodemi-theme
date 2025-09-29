@@ -49,7 +49,7 @@ get_header(); ?>
             wp_reset_postdata();
             ?>
         </div>
-        <article class="flex flex-col sm:flex-row gap-6">
+        <article id='category-cards-home2' class="flex flex-col sm:flex-row gap-6">
             <?php get_template_part('template-parts/category-card'); ?>
         </article>
     </div>
