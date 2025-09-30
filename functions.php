@@ -92,10 +92,6 @@ add_filter('the_content', function ($content) {
 // Adiciona o template atual na barra de admin
 function admin_bar($wp_admin_bar)
 {
-	if (! current_user_can('manage_options')) {
-		return;
-	}
-
 	$theme = wp_get_theme();
 
 	$args = array(
