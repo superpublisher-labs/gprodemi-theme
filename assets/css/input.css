@@ -360,4 +360,8 @@
   #category-cards-home2>a {
     @apply lg:py-4;
   }
+
+  .logo-header path {
+    @apply fill-[var(--color-logo)];
+  }
 }
