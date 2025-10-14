@@ -390,8 +390,20 @@
     @apply flex flex-col items-center self-start;
   }
 
-  .soccer-block-score-content-time p {
-    @apply !text-sm sm:!text-base;
+  .soccer-block-score-content-time {
+    @apply flex flex-col items-center;
+  }
+
+  .soccer-block-score-content-time-content {
+    @apply flex flex-row items-center gap-1;
+  }
+
+  .soccer-block-score-content-time-content p {
+    @apply !text-xs sm:!text-sm;
+  }
+
+  .soccer-block-score-content-time-content span {
+    @apply !text-xs sm:!text-sm bg-[var(--color-logo)]/15 px-1.5 rounded;
   }
 
   .soccer-block-score-content {
@@ -411,12 +423,12 @@
   }
 
   .soccer-block-score-live {
-    @apply relative !text-sm font-semibold text-red-500 pl-5 pr-1 rounded-xl bg-red-500/10 ml-2;
+    @apply relative !text-sm font-semibold text-red-500 pl-5 pr-1.5 rounded-xl bg-red-500/10 ml-2;
   }
 
-  .soccer-block-score-live::before {
-    @apply content-[''] top-1/2 -translate-y-1/2 rounded-full absolute left-1.5 -tracking-[0.25rem] h-2 w-2 bg-red-400;
-  }
+  /* .soccer-block-score-live::before {
+    @apply content-[''] top-1/2 -translate-y-1/2 rounded-full absolute left-2 -tracking-[0.25rem] h-1 w-1 bg-red-400;
+  } */
 
   .soccer-block-score-live::after {
     @apply content-[''] top-1/2 -translate-y-1/2 rounded-full absolute left-1 -tracking-[0.25rem] h-3 w-3 bg-red-500 animate-pulse;
