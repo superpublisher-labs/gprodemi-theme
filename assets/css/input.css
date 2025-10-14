@@ -434,4 +434,7 @@
     @apply content-[''] top-1/2 -translate-y-1/2 rounded-full absolute left-1 -tracking-[0.25rem] h-3 w-3 bg-red-500 animate-pulse;
   }
 
+  .goal-notification {
+    @apply !text-[var(--color-logo)] !font-semibold !text-xl !transition-all !duration-300;
+  }
 }
