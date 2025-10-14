@@ -15,6 +15,7 @@ if($pixel){
   'https://connect.facebook.net/en_US/fbevents.js');
   fbq('init', '<?=$pixel?>');
   fbq('track', 'PageView');
+  fbq('track', 'ViewContent');
 </script>
 <noscript><img height="1" width="1" style="display:none"
   src="https://www.facebook.com/tr?id=<?=$pixel?>&ev=PageView&noscript=1"
