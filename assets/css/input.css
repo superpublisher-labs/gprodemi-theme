@@ -243,11 +243,12 @@
   }
 
   .blocoApps::before,
-  .leiaTambem::before {
+  .leiaTambem::before,
+  .soccer-block::before {
     @apply w-full h-1.5 container mx-auto bg-gradient-to-r rounded-full from-[var(--color-divider)]/50 to-gray-100 content-[''] absolute top-0 left-0;
   }
 
-  .block-blocoApps::before {
+  .block-leiaTambem::before, .block-soccer-block::before, .block-blocoApps::before {
     @apply w-full h-1.5 container mx-auto bg-gradient-to-r rounded-full from-black/50 to-gray-100 content-[''] absolute top-0 left-0;
   }
 
@@ -364,4 +365,61 @@
   .logo-header path {
     @apply fill-[var(--color-logo)];
   }
+
+  .soccer-block, .block-soccer-block {
+    @apply flex flex-row justify-between items-center p-2 sm:p-6 pt-4 sm:pt-8 border border-gray-300 border-t-0 rounded-xl relative overflow-hidden;
+  }
+
+  .soccer-block-team {
+    @apply flex flex-col gap-2 items-center w-1/4 text-center;
+  }
+
+  .soccer-block-team p {
+    @apply !text-xs leading-10 sm:!text-base;
+  }
+
+  .soccer-block-team-img {
+    @apply h-14 w-14 sm:h-24 sm:w-24 p-2 sm:p-4 border border-gray-300 rounded-xl flex items-center justify-center;
+  }
+
+  .soccer-block-team-img img {
+    @apply max-h-full max-w-full object-contain;
+  }
+
+  .soccer-block-score {
+    @apply flex flex-col items-center self-start;
+  }
+
+  .soccer-block-score-content-time p {
+    @apply !text-sm sm:!text-base;
+  }
+
+  .soccer-block-score-content {
+    @apply flex flex-col gap-0 sm:gap-2 text-[var(--color-logo)] text-center font-medium;
+  }
+
+  .soccer-block-score-content-scoreboard {
+    @apply !text-2xl sm:!text-6xl;
+  }
+
+  .soccer-block-score-header {
+    @apply flex flex-row justify-between items-center;
+  }
+
+  .soccer-block-score-date {
+    @apply !text-xs sm:!text-sm text-center;
+  }
+
+  .soccer-block-score-live {
+    @apply relative !text-sm font-semibold text-red-500 pl-5 pr-1 rounded-xl bg-red-500/10 ml-2;
+  }
+
+  .soccer-block-score-live::before {
+    @apply content-[''] top-1/2 -translate-y-1/2 rounded-full absolute left-1.5 -tracking-[0.25rem] h-2 w-2 bg-red-400;
+  }
+
+  .soccer-block-score-live::after {
+    @apply content-[''] top-1/2 -translate-y-1/2 rounded-full absolute left-1 -tracking-[0.25rem] h-3 w-3 bg-red-500 animate-pulse;
+  }
+
 }
