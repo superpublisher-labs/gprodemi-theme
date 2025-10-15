@@ -140,7 +140,18 @@
   #artigo a {
     @apply text-[var(--color-links)] underline;
   }
+  
+  #artigo form {
+    @apply flex flex-col gap-4;
+  }
 
+  #artigo form input:not([type="submit"]), #artigo form textarea {
+    @apply w-full border border-gray-300 rounded-lg p-2.5;
+  }
+
+  #artigo form input[type="submit"] {
+    @apply bg-[var(--color-botao)] !text-white cursor-pointer px-4 py-1 rounded-lg hover:bg-[var(--color-botao)]/70 transition-colors;
+  }
 
   .gprodemi-image-block,
   .imagemPost-radius {
