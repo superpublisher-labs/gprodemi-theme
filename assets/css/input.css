@@ -378,19 +378,19 @@
   }
 
   .soccer-block, .block-soccer-block {
-    @apply flex flex-row justify-between items-center p-2 sm:p-6 pt-4 sm:pt-8 border border-gray-300 border-t-0 rounded-xl relative overflow-hidden;
+    @apply flex flex-row relative justify-between items-center p-3 sm:p-6 pt-4 sm:pt-8 border border-gray-300 border-t-0 rounded-xl overflow-hidden bg-white;
   }
 
   .soccer-block-team {
-    @apply flex flex-col gap-2 items-center w-1/4 text-center;
+    @apply flex flex-col items-center gap-2 w-1/3 sm:w-full text-center;
   }
 
   .soccer-block-team p {
-    @apply !text-xs leading-10 sm:!text-base;
+    @apply !text-xs sm:!text-sm font-medium leading-tight break-words;
   }
 
   .soccer-block-team-img {
-    @apply h-14 w-14 sm:h-24 sm:w-24 p-2 sm:p-4 border border-gray-300 rounded-xl flex items-center justify-center;
+    @apply h-12 w-12 sm:h-20 sm:w-20 p-2 border border-gray-300 rounded-xl flex items-center justify-center bg-white shadow-sm;
   }
 
   .soccer-block-team-img img {
@@ -398,54 +398,54 @@
   }
 
   .soccer-block-score {
-    @apply flex flex-col items-center self-start;
-  }
-
-  .soccer-block-score-content-time {
-    @apply flex flex-col items-center;
-  }
-
-  .soccer-block-score-content-time-content {
-    @apply flex flex-row items-center gap-1;
-  }
-
-  .soccer-block-score-content-time-content p {
-    @apply !text-xs sm:!text-sm;
-  }
-
-  .soccer-block-score-content-time-content span {
-    @apply !text-xs sm:!text-sm bg-[var(--color-logo)]/15 px-1.5 rounded;
-  }
-
-  .soccer-block-score-content {
-    @apply flex flex-col gap-0 sm:gap-2 text-[var(--color-logo)] text-center font-medium;
-  }
-
-  .soccer-block-score-content-scoreboard {
-    @apply !text-2xl sm:!text-6xl;
+    @apply flex flex-col items-center justify-center gap-2 w-full sm:w-2/3 text-center relative;
   }
 
   .soccer-block-score-header {
-    @apply flex flex-row justify-between items-center;
+    @apply flex flex-row justify-center items-center absolute top-2 sm:top-4 left-1/2 -translate-x-1/2;
   }
 
   .soccer-block-score-date {
-    @apply !text-xs sm:!text-sm text-center;
+    @apply !text-xs sm:!text-sm text-gray-500 text-center;
   }
 
   .soccer-block-score-live {
-    @apply relative !text-sm font-semibold text-red-500 pl-5 pr-1.5 rounded-xl bg-red-500/10 ml-2;
+    @apply relative !text-xs sm:!text-sm font-semibold text-red-600 pl-5 pr-2 rounded-xl bg-red-500/10;
   }
 
-  /* .soccer-block-score-live::before {
-    @apply content-[''] top-1/2 -translate-y-1/2 rounded-full absolute left-2 -tracking-[0.25rem] h-1 w-1 bg-red-400;
-  } */
-
-  .soccer-block-score-live::after {
-    @apply content-[''] top-1/2 -translate-y-1/2 rounded-full absolute left-1 -tracking-[0.25rem] h-3 w-3 bg-red-500 animate-pulse;
+  .soccer-block-score-live::before {
+    @apply content-[''] absolute left-1 top-1/2 -translate-y-1/2 rounded-full h-2 w-2 bg-red-500 animate-pulse;
   }
 
-  .goal-notification {
-    @apply !text-[var(--color-logo)] !font-semibold !text-xl !transition-all !duration-300;
+  .soccer-block-score-content {
+    @apply flex flex-row items-center justify-center gap-4 sm:gap-8 font-semibold text-[var(--color-logo)] text-center w-full;
+  }
+
+  .soccer-block-score-content-scoreboard {
+    @apply !text-3xl sm:!text-6xl font-bold flex-1 text-center;
+  }
+  .soccer-block-score-content-time {
+    @apply !text-sm sm:!text-base flex flex-col items-center justify-center;
+  }
+
+  .soccer-block-goal-notification {
+    @apply absolute text-[var(--color-logo)] bottom-4 right-1/2 translate-x-1/2 !text-sm sm:!text-base font-bold opacity-0 -translate-y-[10px];
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+  }
+
+  .soccer-block-goal-notification.visible {
+    @apply opacity-100 translate-y-0;
+  }
+
+  @keyframes goal-shake {
+      0% { transform: scale(1.0); }
+      25% { transform: scale(1.15) rotate(3deg); }
+      50% { transform: scale(1.0) rotate(-3deg); }
+      75% { transform: scale(1.15) rotate(3deg); }
+      100% { transform: scale(1.0) rotate(0); }
+  }
+
+  .soccer-block-score-content.goal-animation {
+      animation: goal-shake 0.8s ease-in-out;
   }
 }
