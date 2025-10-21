@@ -130,11 +130,11 @@
   }
 
   #artigo ul {
-    @apply list-disc space-y-2 pl-5 marker:text-[var(--color-listas)] marker:text-xl;
+    @apply list-disc space-y-2 pl-5 marker:text-[var(--color-listas)] marker:text-xl ml-2;
   }
 
   #artigo ol {
-    @apply list-decimal space-y-2 pl-5 marker:text-[var(--color-listas)];
+    @apply list-decimal space-y-2 pl-5 marker:text-[var(--color-listas)] ml-2;
   }
 
   #artigo a {
