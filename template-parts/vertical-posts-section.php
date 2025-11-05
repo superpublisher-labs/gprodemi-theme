@@ -1,5 +1,8 @@
 <?php
-$displayed_posts = get_query_var('displayed_posts', []);
+global $displayed_posts;
+if (!is_array($displayed_posts)) {
+    $displayed_posts = [];
+}
 ?>
 <section id="vertical-posts" class="py-20">
     <div class="container mx-auto">

@@ -3,9 +3,8 @@ if (! defined('ABSPATH')) {
     exit;
 }
 
-global $post;
+global $post, $displayed_posts;
 $displayed_posts = [];
-set_query_var('displayed_posts', $displayed_posts);
 
 get_header(); ?>
 

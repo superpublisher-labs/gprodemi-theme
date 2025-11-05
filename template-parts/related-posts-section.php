@@ -1,5 +1,8 @@
 <?php
-$displayed_posts = get_query_var('displayed_posts', []);
+global $displayed_posts;
+if (!is_array($displayed_posts)) {
+    $displayed_posts = [];
+}
 $number_related  = get_theme_mod('related_posts_number', 3);
 $section_class   = 'py-20';
 
