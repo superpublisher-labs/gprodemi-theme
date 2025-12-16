@@ -377,6 +377,10 @@
     @apply fill-[var(--color-logo)];
   }
 
+  .logo-header svg {
+    @apply w-full h-full;
+  }
+
   .soccer-block, .block-soccer-block {
     @apply flex flex-row relative justify-between items-center p-3 sm:p-6 pt-4 sm:pt-8 border border-gray-300 border-t-0 rounded-xl overflow-hidden bg-white;
   }
