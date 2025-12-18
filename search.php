@@ -20,13 +20,13 @@ get_header(); ?>
 
             <h2 class="text-3xl font-semibold mb-8">
                 <?php printf(
-                    esc_html__('%s resultado(s) para "%s"', 'textdomain'),
+                    esc_html__('%s result(s) for "%s"', 'gprodemi'),
                     esc_html($total_results),
                     esc_html(get_search_query())
                 ); ?>
             </h2>
 
-            <div class="grid grid-cols-1 md:grid-cols-<?php echo esc_attr(get_theme_mod('related_posts_page_number', 3)%4 === 0 ? 4 : 3 ); ?>  gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-<?php echo esc_attr(get_theme_mod('related_posts_page_number', 3) % 4 === 0 ? 4 : 3); ?>  gap-8">
                 <?php while (have_posts()) : the_post(); ?>
                     <?php
                     get_template_part('partials/post-card');
@@ -38,7 +38,7 @@ get_header(); ?>
 
         <?php else : ?>
             <h2 class="text-3xl font-semibold mb-8">
-                <?php esc_html_e('Nenhum resultado encontrado para', 'textdomain'); ?>
+                <?php esc_html_e('No results found for', 'gprodemi'); ?>
                 "<?php echo esc_html(get_search_query()); ?>"
             </h2>
         <?php endif; ?>

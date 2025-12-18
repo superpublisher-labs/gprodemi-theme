@@ -2,14 +2,14 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: GProdemi 3.1.5\n"
+"Project-Id-Version: GProdemi 3.1.24\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/gprodemi\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2025-09-19T21:36:54+00:00\n"
+"POT-Creation-Date: 2025-12-18T13:03:35+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: gprodemi\n"
@@ -27,7 +27,7 @@ msgstr ""
 
 #. Description of the theme
 #: style.css
-msgid "Tema básico"
+msgid "Gprodemi Theme"
 msgstr ""
 
 #. Author of the theme
@@ -47,100 +47,105 @@ msgstr ""
 msgid "Go to Homepage"
 msgstr ""
 
+#: functions.php:208
+msgid "Activate title on header"
+msgstr ""
+
 #: functions.php:219
-msgid "Ativar título no cabeçalho"
+msgid "Activate border on title"
 msgstr ""
 
-#: functions.php:230
-msgid "Ativar borda no título"
+#: functions.php:229
+msgid "Footer"
 msgstr ""
 
-#: functions.php:240
-msgid "Rodapé"
+#: functions.php:239
+msgid "Footer Text"
 msgstr ""
 
 #: functions.php:250
-msgid "Texto do rodapé"
+msgid "Primary Menu"
 msgstr ""
 
-#: functions.php:261
-msgid "Menu Principal"
+#: functions.php:251
+msgid "Footer Menu"
 msgstr ""
 
-#: functions.php:262
-msgid "Menu do Rodapé"
+#: functions.php:260
+#: template-parts/related-posts-section.php:33
+msgid "Related Posts"
 msgstr ""
 
-#: functions.php:271
-msgid "Quantidade de posts"
+#: functions.php:270
+msgid "Number of posts per section"
 msgstr ""
 
 #: functions.php:281
-msgid "Número de posts por seção"
+msgid "Number of posts per page (categories, authors, etc)"
 msgstr ""
 
-#: functions.php:292
-msgid "Número de posts por página (categorias, autores, etc)"
+#: functions.php:303
+msgid "Comments Settings"
 msgstr ""
 
-#: functions.php:314
-msgid "Configurações de Comentários"
+#: functions.php:313
+msgid "Enable comments on posts"
 msgstr ""
 
-#: functions.php:324
-msgid "Habilitar comentários nos posts"
+#: functions.php:323
+msgid "Colors"
 msgstr ""
 
-#: functions.php:334
-msgid "Cores do Tema"
-msgstr ""
-
-#: functions.php:353
+#: functions.php:342
 #, php-format
-msgid "Cor %s"
+msgid "Color %s"
 msgstr ""
 
-#: functions.php:385
-msgid "Configurações do Index"
+#: functions.php:374
+msgid "Index Settings"
 msgstr ""
 
-#: functions.php:397
-msgid "Escolha a versão do Index"
+#: functions.php:386
+msgid "Choose Index Version"
 msgstr ""
 
-#: functions.php:402
-msgid "Versão 1"
+#: functions.php:391
+msgid "Version 1"
 msgstr ""
 
-#: functions.php:403
-msgid "Versão 2"
+#: functions.php:392
+msgid "Version 2"
 msgstr ""
 
-#: functions.php:416
+#: functions.php:405
 #, php-format
 msgctxt "featured post number"
-msgid "Post destacado %d"
+msgid "Featured Post %d"
 msgstr ""
 
-#: functions.php:430
-msgid "Selecionar"
+#: functions.php:419
+msgid "Select"
+msgstr ""
+
+#: functions.php:426
+#, php-format
+msgctxt "featured category card number"
+msgid "Category of card %d"
+msgstr ""
+
+#: functions.php:433
+#: template-parts/category-card.php:22
+msgid "Check the best"
 msgstr ""
 
 #: functions.php:437
 #, php-format
 msgctxt "featured category card number"
-msgid "Categoria do card %d"
+msgid "Text of category card %d"
 msgstr ""
 
-#: functions.php:444
-#: template-parts/category-card.php:22
-msgid "Confira os melhores"
-msgstr ""
-
-#: functions.php:448
-#, php-format
-msgctxt "featured category card number"
-msgid "Texto do card categoria %d"
+#: functions.php:450
+msgid "Articles published by this author."
 msgstr ""
 
 #: header.php:50
@@ -148,6 +153,7 @@ msgid "Home"
 msgstr ""
 
 #: header.php:63
+#: searchform.php:16
 msgid "Search"
 msgstr ""
 
@@ -165,11 +171,10 @@ msgstr ""
 #: template-parts/post-card-inline.php:14
 #: template-parts/post-card-with-label.php:16
 #: template-parts/post-card-with-label.php:21
-#: template-parts/post-card-with-label.php:25
 #: template-parts/post-card-without-photo.php:12
 #: template-parts/post-card-without-photo.php:16
 #: template-parts/post-card.php:13
-msgid "Sem Título"
+msgid "Untitled"
 msgstr ""
 
 #: partials/post-card.php:31
@@ -177,6 +182,19 @@ msgstr ""
 #: template-parts/post-card-without-photo.php:17
 #: template-parts/post-card.php:34
 msgid "Read More"
+msgstr ""
+
+#: search.php:23
+#, php-format
+msgid "%s result(s) for \"%s\""
+msgstr ""
+
+#: search.php:41
+msgid "No results found for"
+msgstr ""
+
+#: searchform.php:8
+msgid "Search articles, categories, tags..."
 msgstr ""
 
 #: template-parts/authors-card.php:11
@@ -187,14 +205,22 @@ msgstr ""
 msgid "Browse by category"
 msgstr ""
 
-#: template-parts/like-also-section.php:24
+#: template-parts/like-also-section.php:27
 msgid "You might also like"
 msgstr ""
 
-#: template-parts/related-posts-section.php:30
-msgid "Posts Relacionados"
+#: template-parts/navigation.php:8
+msgid "Previous"
 msgstr ""
 
-#: template-parts/trendings-section.php:43
-msgid "Tendências"
+#: template-parts/navigation.php:11
+msgid "Next"
+msgstr ""
+
+#: template-parts/post-card-with-label.php:25
+msgid "Untitled"
+msgstr ""
+
+#: template-parts/trendings-section.php:46
+msgid "Trending Posts"
 msgstr ""

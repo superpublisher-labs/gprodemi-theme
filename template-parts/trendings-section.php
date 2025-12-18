@@ -43,7 +43,7 @@ if (!empty($trending_post_ids)) :
 ?>
     <section id="trendings" class="<?php echo esc_attr($section_class); ?>">
         <div class="container mx-auto">
-            <h2 class="text-2xl font-semibold mb-8"><?php _e('Tendências', 'gprodemi'); ?></h2>
+            <h2 class="text-2xl font-semibold mb-8"><?php _e('Trending Posts', 'gprodemi'); ?></h2>
             <div class="<?php echo esc_attr($grid_class); ?>">
                 <?php
                 $trending_query = new WP_Query([

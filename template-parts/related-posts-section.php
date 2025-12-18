@@ -30,7 +30,7 @@ if ($related_query->have_posts()) :
 ?>
     <section id="related-posts" class="<?php echo esc_attr($section_class); ?>">
         <div class="container mx-auto">
-            <h2 class="text-2xl font-semibold mb-8"><?php _e('Posts Relacionados', 'gprodemi'); ?></h2>
+            <h2 class="text-2xl font-semibold mb-8"><?php _e('Related Posts', 'gprodemi'); ?></h2>
             <div class="<?php echo esc_attr($grid_class); ?>">
                 <?php
                 while ($related_query->have_posts()) : $related_query->the_post();

@@ -10,7 +10,7 @@ if (! defined('ABSPATH')) {
             // a função the_post_thumbnail já usa o post global do loop, mais simples.
             the_post_thumbnail('large', [
                 'class' => 'w-full rounded-xl flex',
-                'alt'   => get_the_title() ?: __('Sem Título', 'gprodemi')
+                'alt'   => get_the_title() ?: __('Untitled', 'gprodemi')
             ]);
             ?>
         <?php else: ?>

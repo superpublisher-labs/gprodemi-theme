@@ -19,7 +19,7 @@ for ($i = 1; $i <= 3; $i++) {
     if (!$cat || is_wp_error($cat)) continue;
 
     // pega texto do card
-    $card_text = get_theme_mod("featured_cat_text_$i", __("Confira os melhores", "gprodemi"));
+    $card_text = get_theme_mod("featured_cat_text_$i", __("Check the best", "gprodemi"));
 ?>
     <a href="<?php echo esc_url(get_category_link($cat->term_id)); ?>" class="w-full p-6 lg:p-0 rounded-xl bg-white/5 backdrop-blur-sm flex-1 flex flex-col items-center justify-center border border-gray-300">
         <h3 class="!text-lg !font-medium"><?php echo esc_html($cat->name); ?></h3>

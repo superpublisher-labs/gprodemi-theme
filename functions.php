@@ -160,8 +160,8 @@ function display_custom_favicon()
 }
 add_action('wp_head', 'display_custom_favicon', 100);
 
-add_filter('get_site_icon_url', function($url){
-    return $url . '?v=1';
+add_filter('get_site_icon_url', function ($url) {
+	return $url . '?v=1';
 });
 
 // Habiltiar SVG no header
@@ -205,7 +205,7 @@ function theme_customize_register($wp_customize)
 	]);
 
 	$wp_customize->add_control('show_site_title_logo', [
-		'label'   => __('Ativar título no cabeçalho', 'gprodemi'),
+		'label'   => __('Activate title on header', 'gprodemi'),
 		'section' => 'title_tagline',
 		'type'    => 'checkbox',
 	]);
@@ -216,7 +216,7 @@ function theme_customize_register($wp_customize)
 	]);
 
 	$wp_customize->add_control('activate_border_title', [
-		'label'   => __('Ativar borda no título', 'gprodemi'),
+		'label'   => __('Activate border on title', 'gprodemi'),
 		'section' => 'title_tagline',
 		'type'    => 'checkbox',
 	]);
@@ -226,7 +226,7 @@ add_action('customize_register', 'theme_customize_register');
 function theme_footer_text($wp_customize)
 {
 	$wp_customize->add_section('footer_text_section', [
-		'title'    => __('Rodapé', 'gprodemi'),
+		'title'    => __('Footer', 'gprodemi'),
 		'priority' => 70,
 	]);
 
@@ -236,7 +236,7 @@ function theme_footer_text($wp_customize)
 	]);
 
 	$wp_customize->add_control('footer_text', [
-		'label'   => __('Texto do rodapé', 'gprodemi'),
+		'label'   => __('Footer Text', 'gprodemi'),
 		'section' => 'footer_text_section',
 		'type'    => 'textarea',
 	]);
@@ -247,8 +247,8 @@ add_action('customize_register', 'theme_footer_text');
 function theme_register_menus()
 {
 	register_nav_menus([
-		'primary_menu' => __('Menu Principal', 'gprodemi'),
-		'footer_menu'  => __('Menu do Rodapé', 'gprodemi'),
+		'primary_menu' => __('Primary Menu', 'gprodemi'),
+		'footer_menu'  => __('Footer Menu', 'gprodemi'),
 	]);
 }
 add_action('after_setup_theme', 'theme_register_menus');
@@ -257,7 +257,7 @@ add_action('after_setup_theme', 'theme_register_menus');
 function theme_customize_related_posts($wp_customize)
 {
 	$wp_customize->add_section('related_posts_section', [
-		'title'    => __('Quantidade de posts', 'gprodemi'),
+		'title'    => __('Related Posts', 'gprodemi'),
 		'priority' => 70,
 	]);
 
@@ -267,7 +267,7 @@ function theme_customize_related_posts($wp_customize)
 	]);
 
 	$wp_customize->add_control('related_posts_number', [
-		'label'   => __('Número de posts por seção', 'gprodemi'),
+		'label'   => __('Number of posts per section', 'gprodemi'),
 		'section' => 'related_posts_section',
 		'type'    => 'number',
 	]);
@@ -278,7 +278,7 @@ function theme_customize_related_posts($wp_customize)
 	]);
 
 	$wp_customize->add_control('related_posts_page_number', [
-		'label'   => __('Número de posts por página (categorias, autores, etc)', 'gprodemi'),
+		'label'   => __('Number of posts per page (categories, authors, etc)', 'gprodemi'),
 		'section' => 'related_posts_section',
 		'type'    => 'number',
 	]);
@@ -300,7 +300,7 @@ add_action('pre_get_posts', 'custom_posts_per_page');
 function gprodemi_customize_register($wp_customize)
 {
 	$wp_customize->add_section('gprodemi_comments', [
-		'title'    => __('Configurações de Comentários', 'gprodemi'),
+		'title'    => __('Comments Settings', 'gprodemi'),
 		'priority' => 30,
 	]);
 
@@ -310,7 +310,7 @@ function gprodemi_customize_register($wp_customize)
 	]);
 
 	$wp_customize->add_control('enable_comments_posts', [
-		'label'   => __('Habilitar comentários nos posts', 'gprodemi'),
+		'label'   => __('Enable comments on posts', 'gprodemi'),
 		'section' => 'gprodemi_comments',
 		'type'    => 'checkbox',
 	]);
@@ -320,7 +320,7 @@ add_action('customize_register', 'gprodemi_customize_register');
 function theme_customize_colors($wp_customize)
 {
 	$wp_customize->add_section('theme_colors', [
-		'title'    => __('Cores do Tema', 'gprodemi'),
+		'title'    => __('Colors', 'gprodemi'),
 		'priority' => 20,
 	]);
 
@@ -339,7 +339,7 @@ function theme_customize_colors($wp_customize)
 		]);
 
 		$wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, "color_$slug", [
-			'label'    => sprintf(__('Cor %s', 'gprodemi'), ucfirst($slug)),
+			'label'    => sprintf(__('Color %s', 'gprodemi'), ucfirst($slug)),
 			'section'  => 'theme_colors',
 			'settings' => "color_$slug",
 		]));
@@ -371,7 +371,7 @@ add_theme_support('custom-logo', [
 add_action('customize_register', function ($wp_customize) {
 	// Seção
 	$wp_customize->add_section('gprodemi_index_section', [
-		'title'    => __('Configurações do Index', 'gprodemi'),
+		'title'    => __('Index Settings', 'gprodemi'),
 		'priority' => 30,
 	]);
 
@@ -383,13 +383,13 @@ add_action('customize_register', function ($wp_customize) {
 
 	// Controle (dropdown)
 	$wp_customize->add_control('gprodemi_index_version_control', [
-		'label'    => __('Escolha a versão do Index', 'gprodemi'),
+		'label'    => __('Choose Index Version', 'gprodemi'),
 		'section'  => 'gprodemi_index_section',
 		'settings' => 'gprodemi_index_version',
 		'type'     => 'select',
 		'choices'  => [
-			'v1' => __('Versão 1', 'gprodemi'),
-			'v2' => __('Versão 2', 'gprodemi'),
+			'v1' => __('Version 1', 'gprodemi'),
+			'v2' => __('Version 2', 'gprodemi'),
 		],
 	]);
 
@@ -402,7 +402,7 @@ add_action('customize_register', function ($wp_customize) {
 
 		// translators: %d is the featured post number
 		$wp_customize->add_control("featured_post_$i", [
-			'label'   => sprintf(_x('Post destacado %d', 'featured post number', 'gprodemi'), $i),
+			'label'   => sprintf(_x('Featured Post %d', 'featured post number', 'gprodemi'), $i),
 			'section' => 'gprodemi_index_section',
 			'type'    => 'dropdown-pages',
 		]);
@@ -416,25 +416,25 @@ add_action('customize_register', function ($wp_customize) {
 		]);
 
 		$categories = get_categories(['hide_empty' => false]);
-		$choices = [0 => '— ' . __('Selecionar', 'gprodemi') . ' —']; // <-- opção de limpar
+		$choices = [0 => '— ' . __('Select', 'gprodemi') . ' —']; // <-- opção de limpar
 
 		foreach ($categories as $cat) {
 			$choices[$cat->term_id] = $cat->name;
 		}
 
 		$wp_customize->add_control("featured_cat_$i", [
-			'label'   => sprintf(_x('Categoria do card %d', 'featured category card number', 'gprodemi'), $i),
+			'label'   => sprintf(_x('Category of card %d', 'featured category card number', 'gprodemi'), $i),
 			'section' => 'gprodemi_index_section',
 			'type'    => 'select',
 			'choices' => $choices,
 		]);
 
 		$wp_customize->add_setting("featured_cat_text_$i", [
-			'default'           => __('Confira os melhores', 'gprodemi'),
+			'default'           => __('Check the best', 'gprodemi'),
 			'sanitize_callback' => 'sanitize_text_field',
 		]);
 		$wp_customize->add_control("featured_cat_text_$i", [
-			'label'   => sprintf(_x('Texto do card categoria %d', 'featured category card number', 'gprodemi'), $i),
+			'label'   => sprintf(_x('Text of category card %d', 'featured category card number', 'gprodemi'), $i),
 			'section' => 'gprodemi_index_section',
 			'type'    => 'text',
 		]);
@@ -447,9 +447,34 @@ add_filter('wpseo_metadesc', function ($desc) {
 		if (!empty($bio)) {
 			return $bio;
 		}
-		return __('Artigos publicados por este autor.', 'seutema');
+		return __('Articles published by this author.', 'gprodemi');
 	}
 	return $desc;
 });
 
 add_theme_support('post-thumbnails'); // suporte a thumbnails
+
+// suporte a tradução
+add_filter('load_textdomain_mofile', function ($mofile, $domain) {
+
+	if ($domain !== 'gprodemi') {
+		return $mofile;
+	}
+
+	if (file_exists($mofile)) {
+		return $mofile;
+	}
+
+	$locale = determine_locale();
+	$path   = dirname($mofile);
+
+	if (str_starts_with($locale, 'es_')) {
+		$fallback = "$path/es_ES.mo";
+	} elseif (str_starts_with($locale, 'pt_')) {
+		$fallback = "$path/pt_BR.mo";
+	} else {
+		return $mofile;
+	}
+
+	return file_exists($fallback) ? $fallback : $mofile;
+}, 10, 2);
