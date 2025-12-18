@@ -468,9 +468,12 @@ add_filter('load_textdomain_mofile', function ($mofile, $domain) {
 	$locale = determine_locale();
 	$path   = dirname($mofile);
 
-	if (str_starts_with($locale, 'es_')) {
+	$lang = strtolower(str_replace('-', '_', $locale));
+	$lang = explode('_', $lang)[0];
+
+	if ($lang === 'es') {
 		$fallback = "$path/es_ES.mo";
-	} elseif (str_starts_with($locale, 'pt_')) {
+	} elseif ($lang === 'pt') {
 		$fallback = "$path/pt_BR.mo";
 	} else {
 		return $mofile;
