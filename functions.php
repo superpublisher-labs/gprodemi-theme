@@ -481,3 +481,31 @@ add_filter('load_textdomain_mofile', function ($mofile, $domain) {
 
 	return file_exists($fallback) ? $fallback : $mofile;
 }, 10, 2);
+
+// Function experimental
+add_action('template_redirect', function () {
+	ob_start(function ($html) {
+		// Remove a tag de estilo global (pega aspas simples ' ou duplas " e ignora espaços)
+		$html = preg_replace(
+			'/<style[^>]*id=["\']global-styles-inline-css["\'][^>]*>.*?<\/style>/si',
+			'',
+			$html
+		);
+
+		// // Remove os filtros SVG (aqueles <svg> ocultos no inicio/fim do body)
+		// $html = preg_replace( 
+		//     '/<svg[^>]*viewBox=["\']0 0 0 0["\'][^>]*>.*?<\/svg>/si', 
+		//     '', 
+		//     $html 
+		// );
+
+		// // Remove container de site blocks se existir
+		// $html = preg_replace( 
+		//     '/<div[^>]*class=["\']wp-site-blocks["\'][^>]*>.*?<\/div>/si', 
+		//     '', 
+		//     $html 
+		// );
+
+		return $html;
+	});
+});
