@@ -1,5 +1,9 @@
 <?php
 
+if (! defined('ABSPATH')) {
+	exit;
+}
+
 use YahnisElsts\PluginUpdateChecker\v5\PucFactory;
 
 if (!class_exists(PucFactory::class) && file_exists(get_template_directory() . '/vendor/autoload.php')) {
@@ -16,10 +20,12 @@ if (class_exists(PucFactory::class)) {
 	$UpdateChecker->setBranch('master');
 }
 
-
-if (! defined('ABSPATH')) {
-	exit; // Exit if accessed directly.
-}
+add_filter('auto_update_theme', function ($update, $item) {
+	if (isset($item->slug) && 'gprodemi' === $item->slug) {
+		return true;
+	}
+	return $update;
+}, 10, 2);
 
 add_theme_support('title-tag');
 
