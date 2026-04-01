@@ -1,15 +1,15 @@
-# Copyright (C) 2025 Prodemi
+# Copyright (C) 2026 Prodemi
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: GProdemi 3.1.24\n"
+"Project-Id-Version: GProdemi 3.2.2\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/gprodemi\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2025-12-18T13:03:35+00:00\n"
+"POT-Creation-Date: 2026-04-01T13:12:47+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: gprodemi\n"
@@ -47,104 +47,104 @@ msgstr ""
 msgid "Go to Homepage"
 msgstr ""
 
-#: functions.php:208
+#: functions.php:214
 msgid "Activate title on header"
 msgstr ""
 
-#: functions.php:219
+#: functions.php:225
 msgid "Activate border on title"
 msgstr ""
 
-#: functions.php:229
+#: functions.php:235
 msgid "Footer"
 msgstr ""
 
-#: functions.php:239
+#: functions.php:245
 msgid "Footer Text"
 msgstr ""
 
-#: functions.php:250
+#: functions.php:256
 msgid "Primary Menu"
 msgstr ""
 
-#: functions.php:251
+#: functions.php:257
 msgid "Footer Menu"
 msgstr ""
 
-#: functions.php:260
+#: functions.php:266
 #: template-parts/related-posts-section.php:33
 msgid "Related Posts"
 msgstr ""
 
-#: functions.php:270
+#: functions.php:276
 msgid "Number of posts per section"
 msgstr ""
 
-#: functions.php:281
+#: functions.php:287
 msgid "Number of posts per page (categories, authors, etc)"
 msgstr ""
 
-#: functions.php:303
+#: functions.php:309
 msgid "Comments Settings"
 msgstr ""
 
-#: functions.php:313
+#: functions.php:319
 msgid "Enable comments on posts"
 msgstr ""
 
-#: functions.php:323
+#: functions.php:329
 msgid "Colors"
 msgstr ""
 
-#: functions.php:342
+#: functions.php:348
 #, php-format
 msgid "Color %s"
 msgstr ""
 
-#: functions.php:374
+#: functions.php:380
 msgid "Index Settings"
 msgstr ""
 
-#: functions.php:386
+#: functions.php:392
 msgid "Choose Index Version"
 msgstr ""
 
-#: functions.php:391
+#: functions.php:397
 msgid "Version 1"
 msgstr ""
 
-#: functions.php:392
+#: functions.php:398
 msgid "Version 2"
 msgstr ""
 
-#: functions.php:405
+#: functions.php:411
 #, php-format
 msgctxt "featured post number"
 msgid "Featured Post %d"
 msgstr ""
 
-#: functions.php:419
+#: functions.php:425
 msgid "Select"
 msgstr ""
 
-#: functions.php:426
+#: functions.php:432
 #, php-format
 msgctxt "featured category card number"
 msgid "Category of card %d"
 msgstr ""
 
-#: functions.php:433
+#: functions.php:439
 #: template-parts/category-card.php:22
 msgid "Check the best"
 msgstr ""
 
-#: functions.php:437
+#: functions.php:443
 #, php-format
 msgctxt "featured category card number"
 msgid "Text of category card %d"
 msgstr ""
 
-#: functions.php:450
+#: functions.php:456
 msgid "Articles published by this author."
 msgstr ""
 
@@ -161,6 +161,10 @@ msgstr ""
 msgid "Menu"
 msgstr ""
 
+#: page.php:15
+msgid "Pages:"
+msgstr ""
+
 #: partials/post-card.php:8
 #: partials/post-card.php:16
 #: partials/post-card.php:21
@@ -171,6 +175,7 @@ msgstr ""
 #: template-parts/post-card-inline.php:14
 #: template-parts/post-card-with-label.php:16
 #: template-parts/post-card-with-label.php:21
+#: template-parts/post-card-with-label.php:25
 #: template-parts/post-card-without-photo.php:12
 #: template-parts/post-card-without-photo.php:16
 #: template-parts/post-card.php:13
@@ -197,6 +202,11 @@ msgstr ""
 msgid "Search articles, categories, tags..."
 msgstr ""
 
+#: single.php:34
+#, php-format
+msgid "Published on %s"
+msgstr ""
+
 #: template-parts/authors-card.php:11
 msgid "Posted and reviewed"
 msgstr ""
@@ -215,10 +225,6 @@ msgstr ""
 
 #: template-parts/navigation.php:11
 msgid "Next"
-msgstr ""
-
-#: template-parts/post-card-with-label.php:25
-msgid "Untitled"
 msgstr ""
 
 #: template-parts/trendings-section.php:46

@@ -4,24 +4,23 @@
   --font-maven: "Maven Pro", sans-serif;
 
   @keyframes float {
-
     0%,
     100% {
-      transform: translateY(0px)
+      transform: translateY(0px);
     }
 
     50% {
-      transform: translateY(-20px)
+      transform: translateY(-20px);
     }
   }
 
   @keyframes fade-in {
     0% {
-      opacity: 0
+      opacity: 0;
     }
 
     100% {
-      opacity: 1
+      opacity: 1;
     }
   }
 
@@ -37,7 +36,7 @@
 
   @keyframes slide-down {
     0% {
-      height: 0
+      height: 0;
     }
 
     100% {
@@ -80,12 +79,13 @@
   }
 
   @font-face {
-    font-family: 'icomoon';
-    src: url('../font/icomoon.eot?gmy3hg');
-    src: url('../font/icomoon.eot?gmy3hg#iefix') format('embedded-opentype'),
-      url('../font/icomoon.ttf?gmy3hg') format('truetype'),
-      url('../font/icomoon.woff?gmy3hg') format('woff'),
-      url('../font/icomoon.svg?gmy3hg#icomoon') format('svg');
+    font-family: "icomoon";
+    src: url("../font/icomoon.eot?gmy3hg");
+    src:
+      url("../font/icomoon.eot?gmy3hg#iefix") format("embedded-opentype"),
+      url("../font/icomoon.ttf?gmy3hg") format("truetype"),
+      url("../font/icomoon.woff?gmy3hg") format("woff"),
+      url("../font/icomoon.svg?gmy3hg#icomoon") format("svg");
     font-weight: normal;
     font-style: normal;
     font-display: block;
@@ -93,7 +93,7 @@
 
   [class^="icon-"],
   [class*=" icon-"] {
-    font-family: 'icomoon' !important;
+    font-family: "icomoon" !important;
     speak: never;
     font-style: normal;
     font-weight: normal;
@@ -140,12 +140,13 @@
   #artigo a {
     @apply text-[var(--color-links)] underline;
   }
-  
+
   #artigo form {
     @apply flex flex-col gap-4;
   }
 
-  #artigo form input:not([type="submit"]), #artigo form textarea {
+  #artigo form input:not([type="submit"]),
+  #artigo form textarea {
     @apply w-full border border-gray-300 rounded-lg p-2.5;
   }
 
@@ -242,7 +243,7 @@
 
   .blocoApps-link,
   .block-blocoApps-link {
-    @apply bg-[var(--color-botao)] !text-white px-4 py-1 rounded uppercase mt-4 ml-auto text-center !text-base hover:bg-[var(--color-botao)]/60 transition-colors ;
+    @apply bg-[var(--color-botao)] !text-white px-4 py-1 rounded uppercase mt-4 ml-auto text-center !text-base hover:bg-[var(--color-botao)]/60 transition-colors;
   }
 
   .block-blocoApps-link {
@@ -259,7 +260,9 @@
     @apply w-full h-1.5 container mx-auto bg-gradient-to-r rounded-full from-[var(--color-divider)]/50 to-gray-100 content-[''] absolute top-0 left-0;
   }
 
-  .block-leiaTambem::before, .block-soccer-block::before, .block-blocoApps::before {
+  .block-leiaTambem::before,
+  .block-soccer-block::before,
+  .block-blocoApps::before {
     @apply w-full h-1.5 container mx-auto bg-gradient-to-r rounded-full from-black/50 to-gray-100 content-[''] absolute top-0 left-0;
   }
 
@@ -309,7 +312,7 @@
   .wp-block-gprodemi-faq-block .faq-question::after,
   .wp-block-gprodemi-faq-block .block-faq-question::after {
     @apply absolute top-1/2 -translate-y-1/2 right-0 text-lg rounded-full transition-transform duration-300;
-    content: '\f078';
+    content: "\f078";
     font-family: "icomoon";
     font-weight: 900;
   }
@@ -340,7 +343,7 @@
   .linksInternos-a::after,
   .block-linksInternos-a::after {
     @apply top-1/2 -translate-y-1/2 rounded-full absolute right-4 -tracking-[0.25rem];
-    content: '\f054 \f054 \f054';
+    content: "\f054 \f054 \f054";
     font-family: "icomoon";
     font-weight: 900;
   }
@@ -350,7 +353,7 @@
   }
 
   .page-links {
-    @apply !text-gray-600 !text-sm my-12;
+    @apply !text-gray-600 !text-sm my-14;
   }
 
   .page-link {
@@ -369,7 +372,7 @@
     @apply py-6;
   }
 
-  #category-cards-home2>a {
+  #category-cards-home2 > a {
     @apply lg:py-4;
   }
 
@@ -381,7 +384,8 @@
     @apply w-full h-full;
   }
 
-  .soccer-block, .block-soccer-block {
+  .soccer-block,
+  .block-soccer-block {
     @apply flex flex-row relative justify-between items-center p-3 sm:p-6 pt-4 sm:pt-8 border border-gray-300 border-t-0 rounded-xl overflow-hidden bg-white;
   }
 
@@ -434,7 +438,9 @@
 
   .soccer-block-goal-notification {
     @apply absolute text-[var(--color-logo)] bottom-4 right-1/2 translate-x-1/2 !text-sm sm:!text-base font-bold opacity-0 -translate-y-[10px];
-    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+    transition:
+      opacity 0.5s ease-out,
+      transform 0.5s ease-out;
   }
 
   .soccer-block-goal-notification.visible {
@@ -442,14 +448,24 @@
   }
 
   @keyframes goal-shake {
-      0% { transform: scale(1.0); }
-      25% { transform: scale(1.15) rotate(3deg); }
-      50% { transform: scale(1.0) rotate(-3deg); }
-      75% { transform: scale(1.15) rotate(3deg); }
-      100% { transform: scale(1.0) rotate(0); }
+    0% {
+      transform: scale(1);
+    }
+    25% {
+      transform: scale(1.15) rotate(3deg);
+    }
+    50% {
+      transform: scale(1) rotate(-3deg);
+    }
+    75% {
+      transform: scale(1.15) rotate(3deg);
+    }
+    100% {
+      transform: scale(1) rotate(0);
+    }
   }
 
   .soccer-block-score-content.goal-animation {
-      animation: goal-shake 0.8s ease-in-out;
+    animation: goal-shake 0.8s ease-in-out;
   }
 }

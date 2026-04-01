@@ -14,11 +14,10 @@ if (! defined('ABSPATH')) {
                 <?php the_author(); ?>
             </a>
         </span>
-        <span class="bg-[var(--color-botao)] px-2 flex items-center rounded-full">
-            <a href="<?php echo get_category_link(get_the_category()[0]->term_id); ?>" class="!text-white !text-sm !font-medium">
-                <?php echo get_the_category()[0]->name; ?>
-            </a>
-        </span>
-        <span class="text-gray-600 text-sm"><?php echo get_the_date('d/m/Y'); ?></span>
+        <?php if (get_the_author_meta('description')): ?>
+            <p class="text-gray-600 text-sm text-center max-w-md mb-2">
+                <?php echo get_the_author_meta('description'); ?>
+            </p>
+        <?php endif; ?>
     </div>
 </article>
