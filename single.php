@@ -22,7 +22,7 @@ get_header();
 
 			<?php
 			wp_link_pages([
-				'before' => '<div class="page-links">Páginas: ',
+				'before' => '<div class="page-links">' . __('Pages:', 'gprodemi') . ' ',
 				'link_before' => '<span class="page-link">',
 				'link_after' => '</span>',
 				'after'  => '</div>',
