@@ -10,7 +10,9 @@ if (!defined('ABSPATH')) {
     <meta charset="<?php bloginfo('charset'); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <?php wp_head(); ?>
-    <?php include get_template_directory() . '/inc/facebookpixel.php'; ?>
+    <?php if (get_theme_mod('enable_auto_pixel', true)) {
+        include get_template_directory() . '/inc/facebookpixel.php';
+    } ?>
     <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400..900&display=swap" rel="stylesheet">
 </head>
 

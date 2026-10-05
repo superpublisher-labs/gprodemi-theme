@@ -323,6 +323,27 @@ function gprodemi_customize_register($wp_customize)
 }
 add_action('customize_register', 'gprodemi_customize_register');
 
+// Pixel settings
+function gprodemi_customize_pixel($wp_customize)
+{
+	$wp_customize->add_section('gprodemi_pixel', [
+		'title'    => __('Pixel', 'gprodemi'),
+		'priority' => 30,
+	]);
+
+	$wp_customize->add_setting('enable_auto_pixel', [
+		'default'           => true,
+		'sanitize_callback' => 'wp_validate_boolean',
+	]);
+
+	$wp_customize->add_control('enable_auto_pixel', [
+		'label'   => __('Enable automatic pixel', 'gprodemi'),
+		'section' => 'gprodemi_pixel',
+		'type'    => 'checkbox',
+	]);
+}
+add_action('customize_register', 'gprodemi_customize_pixel');
+
 function theme_customize_colors($wp_customize)
 {
 	$wp_customize->add_section('theme_colors', [

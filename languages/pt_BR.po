@@ -96,6 +96,14 @@ msgstr "Configurações de Comentários"
 msgid "Enable comments on posts"
 msgstr "Ativar comentários nos posts"
 
+#: functions.php:331
+msgid "Pixel"
+msgstr "Pixel"
+
+#: functions.php:341
+msgid "Enable automatic pixel"
+msgstr "Ativar pixel automático"
+
 #: functions.php:329
 msgid "Colors"
 msgstr "Cores"
